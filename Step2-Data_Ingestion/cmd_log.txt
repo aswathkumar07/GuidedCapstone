@@ -1,0 +1,1122 @@
+
+C:\Spark\spark3>bin\spark-submit "C:\Users\aswa8\OneDrive - Queen's University\Desktop\Springboard\Guided_Capstone\Step2-Data_Ingestion\data_ingestion.py"
+log4j:ERROR Could not read configuration file from URL [file:log4j.properties].
+java.io.FileNotFoundException: log4j.properties (The system cannot find the file specified)
+        at java.io.FileInputStream.open0(Native Method)
+        at java.io.FileInputStream.open(FileInputStream.java:195)
+        at java.io.FileInputStream.<init>(FileInputStream.java:138)
+        at java.io.FileInputStream.<init>(FileInputStream.java:93)
+        at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+        at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+        at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:557)
+        at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+        at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+        at org.apache.spark.internal.Logging.initializeLogging(Logging.scala:128)
+        at org.apache.spark.internal.Logging.initializeLogIfNecessary(Logging.scala:111)
+        at org.apache.spark.internal.Logging.initializeLogIfNecessary$(Logging.scala:105)
+        at org.apache.spark.deploy.SparkSubmit.initializeLogIfNecessary(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:83)
+        at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1007)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1016)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+log4j:ERROR Ignoring configuration file [file:log4j.properties].
+22/02/20 00:02:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+C:\Users\aswa8\anaconda3\lib\site-packages\numpy\__init__.py:143: UserWarning: mkl-service package failed to import, therefore Intel(R) MKL initialization ensuring its correct out-of-the box operation under condition when Gnu OpenMP had already been loaded by Python process is not assured. Please install mkl-service package, see http://github.com/IntelPython/mkl-service
+  from . import _distributor_init
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/02/20 00:02:06 INFO SparkContext: Running Spark version 3.0.0-preview2
+22/02/20 00:02:06 INFO ResourceUtils: ==============================================================
+22/02/20 00:02:06 INFO ResourceUtils: Resources for spark.driver:
+
+22/02/20 00:02:06 INFO ResourceUtils: ==============================================================
+22/02/20 00:02:06 INFO SparkContext: Submitted application: app
+22/02/20 00:02:06 INFO SecurityManager: Changing view acls to: aswa8
+22/02/20 00:02:06 INFO SecurityManager: Changing modify acls to: aswa8
+22/02/20 00:02:06 INFO SecurityManager: Changing view acls groups to:
+22/02/20 00:02:06 INFO SecurityManager: Changing modify acls groups to:
+22/02/20 00:02:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(aswa8); groups with view permissions: Set(); users  with modify permissions: Set(aswa8); groups with modify permissions: Set()
+22/02/20 00:02:06 INFO Utils: Successfully started service 'sparkDriver' on port 51663.
+22/02/20 00:02:06 INFO SparkEnv: Registering MapOutputTracker
+22/02/20 00:02:06 INFO SparkEnv: Registering BlockManagerMaster
+22/02/20 00:02:07 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/02/20 00:02:07 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/02/20 00:02:07 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/02/20 00:02:07 INFO DiskBlockManager: Created local directory at C:\Users\aswa8\AppData\Local\Temp\blockmgr-43e0d0f8-acc7-4e08-966c-4119da0a5075
+22/02/20 00:02:07 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+22/02/20 00:02:07 INFO SparkEnv: Registering OutputCommitCoordinator
+22/02/20 00:02:07 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/02/20 00:02:07 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://host.docker.internal:4040
+22/02/20 00:02:07 INFO Executor: Starting executor ID driver on host host.docker.internal
+22/02/20 00:02:07 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 51678.
+22/02/20 00:02:07 INFO NettyBlockTransferService: Server created on host.docker.internal:51678
+22/02/20 00:02:07 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/02/20 00:02:07 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, host.docker.internal, 51678, None)
+22/02/20 00:02:07 INFO BlockManagerMasterEndpoint: Registering block manager host.docker.internal:51678 with 366.3 MiB RAM, BlockManagerId(driver, host.docker.internal, 51678, None)
+22/02/20 00:02:07 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, host.docker.internal, 51678, None)
+22/02/20 00:02:07 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, host.docker.internal, 51678, None)
+22/02/20 00:02:08 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/C:/Spark/spark3/spark-warehouse').
+22/02/20 00:02:08 INFO SharedState: Warehouse path is 'file:/C:/Spark/spark3/spark-warehouse'.
+22/02/20 00:02:08 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 243.6 KiB, free 366.1 MiB)
+22/02/20 00:02:09 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.5 KiB, free 366.0 MiB)
+22/02/20 00:02:09 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on host.docker.internal:51678 (size: 23.5 KiB, free: 366.3 MiB)
+22/02/20 00:02:09 INFO SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:0
+22/02/20 00:02:10 INFO ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 00:02:10 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 00:02:10 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 00:02:10 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 00:02:10 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 00:02:11 INFO CodeGenerator: Code generated in 181.2615 ms
+22/02/20 00:02:11 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-azure-file-system.properties,hadoop-metrics2.properties
+22/02/20 00:02:11 INFO MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+22/02/20 00:02:11 INFO MetricsSystemImpl: azure-file-system metrics system started
+22/02/20 00:02:13 INFO FileInputFormat: Total input paths to process : 2
+22/02/20 00:02:13 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+22/02/20 00:02:13 INFO DAGScheduler: Got job 0 (parquet at NativeMethodAccessorImpl.java:0) with 2 output partitions
+22/02/20 00:02:13 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+22/02/20 00:02:13 INFO DAGScheduler: Parents of final stage: List()
+22/02/20 00:02:13 INFO DAGScheduler: Missing parents: List()
+22/02/20 00:02:13 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[8] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+22/02/20 00:02:14 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 175.8 KiB, free 365.9 MiB)
+22/02/20 00:02:14 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 63.9 KiB, free 365.8 MiB)
+22/02/20 00:02:14 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on host.docker.internal:51678 (size: 63.9 KiB, free: 366.2 MiB)
+22/02/20 00:02:14 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1206
+22/02/20 00:02:14 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[8] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+22/02/20 00:02:14 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+22/02/20 00:02:14 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 7494 bytes)
+22/02/20 00:02:14 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+22/02/20 00:02:14 INFO HadoopRDD: Input split: wasbs://stockstoragecontainer@aswastockstorageaccount.blob.core.windows.net/csv/2020-08-05/NYSE/part-00000-5e4ced0a-66e2-442a-b020-347d0df4df8f-c000.txt:0+34241
+C:\Users\aswa8\anaconda3\lib\site-packages\numpy\__init__.py:143: UserWarning: mkl-service package failed to import, therefore Intel(R) MKL initialization ensuring its correct out-of-the box operation under condition when Gnu OpenMP had already been loaded by Python process is not assured. Please install mkl-service package, see http://github.com/IntelPython/mkl-service
+  from . import _distributor_init
+22/02/20 00:02:15 INFO CodeGenerator: Code generated in 30.1223 ms
+22/02/20 00:02:15 INFO CodeGenerator: Code generated in 13.3723 ms
+22/02/20 00:02:15 INFO CodeGenerator: Code generated in 18.1682 ms
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596641691.505, 1, 'NYSE', None, None, 75.30254839137037, 100, 75.35916738004924, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596642052.586, 2, 'NYSE', None, None, 77.20874619466693, 100, 78.90918015646369, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596642604.681, 3, 'NYSE', None, None, 77.15973273251218, 100, 77.3320469411047, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596643066.343, 4, 'NYSE', None, None, 79.29977331004093, 100, 80.08399307353596, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596643610.886, 5, 'NYSE', None, None, 77.8634951217078, 100, 78.30821537434917, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596643903.839, 6, 'NYSE', None, None, 78.74799689143143, 100, 80.32905299746953, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596644222.044, 7, 'NYSE', None, None, 77.16837620945849, 100, 77.97598027909252, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596644638.216, 8, 'NYSE', None, None, 78.06551496692607, 100, 78.80516026628197, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596645100.057, 9, 'NYSE', None, None, 76.69653634240801, 100, 78.5694237573503, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMA', 1596645441.581, 10, 'NYSE', 79.19488165597565, 912, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596645927.205, 11, 'NYSE', None, None, 75.10473622642823, 100, 77.09656190920616, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596646446.198, 12, 'NYSE', None, None, 74.52147919052219, 100, 75.66916329143558, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596647004.882, 13, 'NYSE', None, None, 75.16876091805237, 100, 76.70697764844876, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596647574.259, 14, 'NYSE', None, None, 74.56633254759171, 100, 74.62137517521543, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596647995.013, 15, 'NYSE', None, None, 74.49803365619901, 100, 76.47591167094056, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596648454.304, 16, 'NYSE', None, None, 75.22889133048018, 100, 76.14368647113133, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596648918.534, 17, 'NYSE', None, None, 76.62791946609745, 100, 76.99149298587172, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596649362.976, 18, 'NYSE', None, None, 77.09466818643507, 100, 78.15967343099572, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596649868.791, 19, 'NYSE', None, None, 78.3353650609186, 100, 79.39139072379258, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMA', 1596650173.086, 20, 'NYSE', 76.49092501585646, 962, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596650682.246, 21, 'NYSE', None, None, 75.86732208102528, 100, 77.45980331860885, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596651081.841, 22, 'NYSE', None, None, 75.35314069906033, 100, 76.32487971208958, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596651628.019, 23, 'NYSE', None, None, 77.85343187750611, 100, 79.0331193074161, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596652137.416, 24, 'NYSE', None, None, 75.64115892148705, 100, 76.26446329018546, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596652429.777, 25, 'NYSE', None, None, 74.97638719954472, 100, 75.42323779262054, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596652907.003, 26, 'NYSE', None, None, 77.52322037521836, 100, 79.33425945420234, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596653282.685, 27, 'NYSE', None, None, 78.06926123354738, 100, 79.38384964418596, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596653831.983, 28, 'NYSE', None, None, 77.12031500945074, 100, 78.9844167256703, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596654198.72, 29, 'NYSE', None, None, 79.39164161765176, 100, 79.5747993769026, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMA', 1596654552.493, 30, 'NYSE', 75.04522571305392, 191, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596655116.965, 31, 'NYSE', None, None, 79.20613933874242, 100, 80.50023332283025, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596655472.406, 32, 'NYSE', None, None, 78.47597797422817, 100, 79.62092965993128, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596655926.275, 33, 'NYSE', None, None, 74.47998985580531, 100, 74.89551508082307, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596656478.518, 34, 'NYSE', None, None, 78.22492338762163, 100, 79.50859223577656, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596656961.715, 35, 'NYSE', None, None, 75.26498707457314, 100, 75.41532968899395, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596657420.936, 36, 'NYSE', None, None, 77.12089106659154, 100, 78.38394038517123, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596657729.019, 37, 'NYSE', None, None, 76.07049186070512, 100, 77.38552494182419, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596658281.444, 38, 'NYSE', None, None, 78.66820439464807, 100, 79.65261065842995, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596658616.934, 39, 'NYSE', None, None, 74.63142350491319, 100, 75.82283182627648, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMA', 1596659074.33, 40, 'NYSE', 78.43095407886027, 53, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596659461.378, 41, 'NYSE', None, None, 76.31022271908421, 100, 78.0765476494491, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596659946.73, 42, 'NYSE', None, None, 75.38387770708565, 100, 76.59918184801985, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596660307.891, 43, 'NYSE', None, None, 76.05804200607139, 100, 77.86204183691866, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596660621.969, 44, 'NYSE', None, None, 75.99985303217287, 100, 76.68242859776622, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596660943.669, 45, 'NYSE', None, None, 75.95212613969075, 100, 77.12144994254791, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596661348.405, 46, 'NYSE', None, None, 77.97190606064278, 100, 78.27143298858067, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596661658.051, 47, 'NYSE', None, None, 75.99156285501154, 100, 76.42715821178477, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596662131.075, 48, 'NYSE', None, None, 77.19372055317345, 100, 78.0107488360053, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596662589.682, 49, 'NYSE', None, None, 78.58337859793009, 100, 79.14497900810048, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMA', 1596663116.932, 50, 'NYSE', 78.15296565214692, 179, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596663520.351, 51, 'NYSE', None, None, 77.05180007448926, 100, 78.76626235351881, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596663936.499, 52, 'NYSE', None, None, 75.69695467026497, 100, 76.69478422078042, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596664280.968, 53, 'NYSE', None, None, 74.84616092921071, 100, 76.40868062709862, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596664636.145, 54, 'NYSE', None, None, 75.56032872297094, 100, 76.02075313329634, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596665134.747, 55, 'NYSE', None, None, 76.35798820857099, 100, 76.39018838319296, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596665447.275, 56, 'NYSE', None, None, 78.70592536783023, 100, 80.37470458081316, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596665793.773, 57, 'NYSE', None, None, 75.74422091934673, 100, 77.49038929202364, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596666137.946, 58, 'NYSE', None, None, 78.6476564330356, 100, 80.47710920394199, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596666526.28, 59, 'NYSE', None, None, 75.91742829105941, 100, 77.19245366932743, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMA', 1596667026.676, 60, 'NYSE', 79.19017753613633, 510, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596667469.855, 61, 'NYSE', None, None, 79.40078558164436, 100, 80.15109157477457, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596667850.908, 62, 'NYSE', None, None, 78.9789198964917, 100, 80.96720942493796, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596668419.188, 63, 'NYSE', None, None, 76.3113486344922, 100, 77.22542401119978, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596668763.094, 64, 'NYSE', None, None, 77.68995981052426, 100, 79.64216993508606, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596669180.055, 65, 'NYSE', None, None, 75.06756579530087, 100, 76.75044403484955, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596669547.375, 66, 'NYSE', None, None, 75.36513381021761, 100, 76.55106362629218, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596669954.738, 67, 'NYSE', None, None, 75.77616281605232, 100, 76.67752189660722, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596670418.752, 68, 'NYSE', None, None, 79.03644374001456, 100, 80.72043188872878, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596670861.488, 69, 'NYSE', None, None, 79.38564058753786, 100, 81.04890334909511, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMA', 1596671362.23, 70, 'NYSE', 77.06795641858926, 985, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596671893.769, 71, 'NYSE', None, None, 77.63523916820085, 100, 79.25358711811546, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596672331.846, 72, 'NYSE', None, None, 78.21246333546658, 100, 78.45048096161152, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596672765.545, 73, 'NYSE', None, None, 76.64443284878139, 100, 78.57366309404915, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596673225.48, 74, 'NYSE', None, None, 76.21935899579982, 100, 77.04344776040669, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596673695.636, 75, 'NYSE', None, None, 75.8478984015084, 100, 76.61696789242681, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596674201.895, 76, 'NYSE', None, None, 76.01813180345185, 100, 76.8186966303957, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596674549.751, 77, 'NYSE', None, None, 77.8784726415639, 100, 79.37542436161797, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596674899.061, 78, 'NYSE', None, None, 75.36148546282656, 100, 76.78116265982943, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596675315.036, 79, 'NYSE', None, None, 76.58846135154423, 100, 78.07375116685125, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMA', 1596675885.677, 80, 'NYSE', 75.48433282973839, 415, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596676301.098, 81, 'NYSE', None, None, 78.44373854779045, 100, 79.56876163991889, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596676751.342, 82, 'NYSE', None, None, 76.03152258868963, 100, 76.62801071862529, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596677323.457, 83, 'NYSE', None, None, 77.67555268036375, 100, 77.85319345155587, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596677819.4, 84, 'NYSE', None, None, 79.29386054800592, 100, 79.79439793695545, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596678192.361, 85, 'NYSE', None, None, 74.5313613949204, 100, 74.728633112759, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596678765.342, 86, 'NYSE', None, None, 77.59493870394721, 100, 78.77308244223336, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596679289.657, 87, 'NYSE', None, None, 78.72991611090002, 100, 79.99209821224306, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596679619.225, 88, 'NYSE', None, None, 79.22535565801452, 100, 80.31381699306036, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596679919.259, 89, 'NYSE', None, None, 77.57714480301063, 100, 78.95691831382713, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMA', 1596680469.752, 90, 'NYSE', 74.60467162401571, 57, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596680901.712, 91, 'NYSE', None, None, 74.824765944724, 100, 75.69367523020651, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596681284.531, 92, 'NYSE', None, None, 79.38522608616913, 100, 81.22481926377283, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596681758.555, 93, 'NYSE', None, None, 75.13484570892692, 100, 75.44812980316438, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596682070.839, 94, 'NYSE', None, None, 76.55972319361794, 100, 76.61908977362411, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596682640.71, 95, 'NYSE', None, None, 77.80201149982291, 100, 78.61199125652172, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596682960.652, 96, 'NYSE', None, None, 75.33610876659027, 100, 77.01472842889942, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596683389.678, 97, 'NYSE', None, None, 78.75501287824075, 100, 80.22444991051341, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596683727.836, 98, 'NYSE', None, None, 76.82564161107057, 100, 78.33672321996049, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMA', 1596684219.176, 99, 'NYSE', None, None, 75.54955658171261, 100, 77.14809498455332, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMA', 1596684619.773, 100, 'NYSE', 77.78611024375384, 189, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596641892.778, 1, 'NYSE', None, None, 33.13058150772719, 100, 33.45114006604588, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596642306.275, 2, 'NYSE', None, None, 35.61810419697691, 100, 36.46319808308132, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596642771.462, 3, 'NYSE', None, None, 34.70264391874401, 100, 36.446897437596924, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596643217.323, 4, 'NYSE', None, None, 33.62054468713587, 100, 34.113141616437375, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596643568.753, 5, 'NYSE', None, None, 36.069499013000666, 100, 37.837192461431044, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596644059.466, 6, 'NYSE', None, None, 33.48042574550887, 100, 34.22607633527446, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596644513.627, 7, 'NYSE', None, None, 33.01708300103418, 100, 33.64213452744934, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596645032.193, 8, 'NYSE', None, None, 34.70806631370929, 100, 34.735563152741776, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596645449.956, 9, 'NYSE', None, None, 35.227563279121384, 100, 35.9287767336114, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMB', 1596645834.198, 10, 'NYSE', 34.978674782981564, 277, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596646369.144, 11, 'NYSE', None, None, 34.32998865787691, 100, 34.83326534391389, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596646894.11, 12, 'NYSE', None, None, 32.4935433671406, 100, 33.932498036235344, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596647374.254, 13, 'NYSE', None, None, 33.49276864141164, 100, 35.25530815605919, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596647772.013, 14, 'NYSE', None, None, 32.66162275261572, 100, 34.22406597914221, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596648182.555, 15, 'NYSE', None, None, 32.618523438453764, 100, 34.321220790257634, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596648726.647, 16, 'NYSE', None, None, 35.92523513232006, 100, 37.75790659041613, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596649267.734, 17, 'NYSE', None, None, 36.575734687674796, 100, 36.88932387677994, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596649742.254, 18, 'NYSE', None, None, 35.27715709426438, 100, 35.66519908737188, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596650108.409, 19, 'NYSE', None, None, 36.438470973793514, 100, 38.027378739541106, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMB', 1596650560.506, 20, 'NYSE', 33.17828008517566, 888, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596650874.501, 21, 'NYSE', None, None, 31.788786022252506, 100, 32.39638379010094, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596651448.184, 22, 'NYSE', None, None, 33.202340496595525, 100, 34.994105697397806, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596651854.571, 23, 'NYSE', None, None, 31.921774530986674, 100, 32.9890277134917, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596652238.831, 24, 'NYSE', None, None, 32.59346954867824, 100, 33.86837019694565, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596652629.912, 25, 'NYSE', None, None, 32.23193076651886, 100, 32.61910207892291, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596652966.029, 26, 'NYSE', None, None, 32.2439483221321, 100, 33.03361165574397, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596653410.453, 27, 'NYSE', None, None, 35.64817864683586, 100, 36.57150671569564, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596653978.193, 28, 'NYSE', None, None, 34.46298988460861, 100, 34.46413152241439, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596654345.242, 29, 'NYSE', None, None, 32.746005785304256, 100, 34.24002876796382, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMB', 1596654645.361, 30, 'NYSE', 34.18391410021153, 897, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596655155.275, 31, 'NYSE', None, None, 35.57611669024821, 100, 35.878087089952174, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596655547.957, 32, 'NYSE', None, None, 32.499442587824824, 100, 33.337853310722366, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596655996.616, 33, 'NYSE', None, None, 32.55072919577283, 100, 33.91628547914576, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596656320.885, 34, 'NYSE', None, None, 32.54582611406707, 100, 34.04905190159944, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596656705.523, 35, 'NYSE', None, None, 36.523084476733295, 100, 37.37959120833467, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596657281.298, 36, 'NYSE', None, None, 32.705746819438204, 100, 33.708660489522764, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596657736.018, 37, 'NYSE', None, None, 33.24026340219575, 100, 33.47015874293903, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596658175.561, 38, 'NYSE', None, None, 34.919926651543605, 100, 36.25475102472319, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596658638.902, 39, 'NYSE', None, None, 33.10633687351367, 100, 34.42268558973335, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMB', 1596659180.473, 40, 'NYSE', 36.511794264258505, 370, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596659704.462, 41, 'NYSE', None, None, 35.99392429059457, 100, 37.65286008592938, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596660048.574, 42, 'NYSE', None, None, 33.28657623491653, 100, 34.81338908308471, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596660476.348, 43, 'NYSE', None, None, 33.59315063875747, 100, 34.115135509069, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596660825.82, 44, 'NYSE', None, None, 36.30114149662592, 100, 37.409414813149866, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596661293.195, 45, 'NYSE', None, None, 33.67420683888935, 100, 33.78774130459643, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596661586.026, 46, 'NYSE', None, None, 35.17649749230199, 100, 36.37514191320327, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596661888.091, 47, 'NYSE', None, None, 33.357516391161624, 100, 34.58053004366943, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596662268.271, 48, 'NYSE', None, None, 34.25888484496349, 100, 34.630364137670526, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596662770.512, 49, 'NYSE', None, None, 34.303265943640525, 100, 34.70031240976418, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMB', 1596663103.643, 50, 'NYSE', 36.0754888642666, 758, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596663490.507, 51, 'NYSE', None, None, 32.21134566144535, 100, 33.62307107247458, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596663937.246, 52, 'NYSE', None, None, 35.289821535301385, 100, 35.698996536184254, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596664461.831, 53, 'NYSE', None, None, 32.709781071153685, 100, 34.66822730332619, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596664799.786, 54, 'NYSE', None, None, 34.15397361275278, 100, 34.26635826559998, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596665251.463, 55, 'NYSE', None, None, 33.89920460009556, 100, 35.27933411973567, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596665795.726, 56, 'NYSE', None, None, 34.21009034742319, 100, 36.10887988842586, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596666306.237, 57, 'NYSE', None, None, 33.02735720286899, 100, 34.432894938886875, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596666752.519, 58, 'NYSE', None, None, 36.15522868967785, 100, 37.683658978728786, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596667322.173, 59, 'NYSE', None, None, 35.83845784209568, 100, 37.23495990686729, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMB', 1596667709.503, 60, 'NYSE', 35.7620547909956, 371, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596668109.798, 61, 'NYSE', None, None, 35.03260871007041, 100, 35.79557643772485, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596668446.585, 62, 'NYSE', None, None, 35.07145731420904, 100, 35.975916187757186, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596669017.801, 63, 'NYSE', None, None, 31.969593786352803, 100, 33.85644735082608, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596669533.041, 64, 'NYSE', None, None, 36.350001001918976, 100, 37.69360675411199, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596670092.368, 65, 'NYSE', None, None, 32.643571187350325, 100, 33.48547102228665, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596670475.649, 66, 'NYSE', None, None, 35.44023715124613, 100, 36.22901846332152, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596670932.852, 67, 'NYSE', None, None, 33.854501660727294, 100, 33.988442459172724, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596671400.52, 68, 'NYSE', None, None, 33.27425049259938, 100, 33.78911437558121, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596671728.691, 69, 'NYSE', None, None, 32.21484699162973, 100, 33.81150999315007, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMB', 1596672131.213, 70, 'NYSE', 32.681086955153276, 318, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596672543.71, 71, 'NYSE', None, None, 36.44681607256987, 100, 38.127241433559426, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596672913.351, 72, 'NYSE', None, None, 32.05224505547831, 100, 32.77552412787184, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596673254.026, 73, 'NYSE', None, None, 31.982054072170246, 100, 33.840559493072085, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596673653.686, 74, 'NYSE', None, None, 34.206786426334176, 100, 35.70823194983883, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596674129.773, 75, 'NYSE', None, None, 32.71261997825113, 100, 33.98226949239622, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596674463.729, 76, 'NYSE', None, None, 32.520030946973264, 100, 33.58324677120064, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596674843.497, 77, 'NYSE', None, None, 32.76815652186183, 100, 33.71727885470866, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596675418.399, 78, 'NYSE', None, None, 35.23090639073854, 100, 37.14102723632173, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596675727.472, 79, 'NYSE', None, None, 34.425768708843506, 100, 34.49062339854234, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMB', 1596676092.441, 80, 'NYSE', 34.274077977485, 548, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596676565.026, 81, 'NYSE', None, None, 34.13508268874939, 100, 34.30684878727408, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596677108.088, 82, 'NYSE', None, None, 32.55079603651297, 100, 32.97097229433551, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596677556.255, 83, 'NYSE', None, None, 35.064478061245154, 100, 35.373917127863294, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596677864.574, 84, 'NYSE', None, None, 32.61410677197366, 100, 34.38788372165255, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596678174.581, 85, 'NYSE', None, None, 34.409900562978805, 100, 36.37771521140503, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596678483.156, 86, 'NYSE', None, None, 34.01253555383631, 100, 35.28052317606093, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596678973.134, 87, 'NYSE', None, None, 33.109134116334005, 100, 33.48359357997542, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596679331.415, 88, 'NYSE', None, None, 34.11694500218239, 100, 34.91438171779339, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596679760.544, 89, 'NYSE', None, None, 34.35718658702044, 100, 36.03676630600692, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMB', 1596680242.625, 90, 'NYSE', 34.24929812750274, 145, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596680565.443, 91, 'NYSE', None, None, 33.80390336555996, 100, 34.19733810706729, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596680859.67, 92, 'NYSE', None, None, 35.390527024623346, 100, 35.87346589519521, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596681361.948, 93, 'NYSE', None, None, 33.52964952197735, 100, 35.419653592621025, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596681816.861, 94, 'NYSE', None, None, 35.176507865119895, 100, 37.118983726444725, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596682382.827, 95, 'NYSE', None, None, 34.82795506400784, 100, 35.799334924992394, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596682848.903, 96, 'NYSE', None, None, 33.42671391148053, 100, 34.51921162939241, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596683137.235, 97, 'NYSE', None, None, 32.98808777076142, 100, 33.586658448461534, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596683701.38, 98, 'NYSE', None, None, 35.71717600935078, 100, 36.64596825908953, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMB', 1596684134.285, 99, 'NYSE', None, None, 32.011947954810836, 100, 32.0869074225166, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMB', 1596684448.314, 100, 'NYSE', 33.956288411627945, 369, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596641705.228, 1, 'NYSE', None, None, 158.94896383928273, 100, 160.19549852097555, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596642119.433, 2, 'NYSE', None, None, 159.83784418405443, 100, 161.83380635239612, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596642694.255, 3, 'NYSE', None, None, 159.51592988017737, 100, 161.13106877487644, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596643247.821, 4, 'NYSE', None, None, 158.95068643488636, 100, 159.7771542128967, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596643758.246, 5, 'NYSE', None, None, 157.61019090926987, 100, 159.22924687199028, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596644293.448, 6, 'NYSE', None, None, 158.16539443552094, 100, 158.3254349254478, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596644751.729, 7, 'NYSE', None, None, 159.53065315949038, 100, 159.68567994623987, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596645148.771, 8, 'NYSE', None, None, 158.75786040231858, 100, 159.9221935588707, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596645539.521, 9, 'NYSE', None, None, 160.17551400799576, 100, 161.0682463998877, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMC', 1596645896.492, 10, 'NYSE', 160.878722227392, 836, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596646440.181, 11, 'NYSE', None, None, 160.9504256672059, 100, 160.97506213548274, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596646870.83, 12, 'NYSE', None, None, 159.9627067761561, 100, 160.01360768235406, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596647170.236, 13, 'NYSE', None, None, 160.1854896300369, 100, 160.58617498180672, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596647719.5, 14, 'NYSE', None, None, 157.0671118749214, 100, 158.0219272341977, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596648117.572, 15, 'NYSE', None, None, 158.55339093650886, 100, 158.77978185276586, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596648551.1, 16, 'NYSE', None, None, 158.9705656349355, 100, 159.46339847863882, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596648876.082, 17, 'NYSE', None, None, 158.21122904952765, 100, 159.0516070619255, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596649339.603, 18, 'NYSE', None, None, 159.24833091312723, 100, 160.70567294833566, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596649735.46, 19, 'NYSE', None, None, 156.90987382373714, 100, 158.0527342267169, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMC', 1596650286.861, 20, 'NYSE', 157.02710365675583, 680, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596650820.775, 21, 'NYSE', None, None, 161.5602113615032, 100, 162.9909983781435, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596651357.471, 22, 'NYSE', None, None, 157.94999723799037, 100, 159.3905882473778, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596651682.237, 23, 'NYSE', None, None, 157.33154263574315, 100, 158.06410441315333, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596652164.547, 24, 'NYSE', None, None, 160.7378531984572, 100, 161.91127550439737, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596652647.196, 25, 'NYSE', None, None, 159.0499724894248, 100, 159.5113387832061, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596652965.605, 26, 'NYSE', None, None, 160.87423581237869, 100, 161.28687833580412, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596653513.136, 27, 'NYSE', None, None, 156.8581355770818, 100, 158.84711813251482, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596653839.609, 28, 'NYSE', None, None, 159.57120731718135, 100, 159.93217015011152, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596654184.932, 29, 'NYSE', None, None, 158.42609343223376, 100, 159.1731391848486, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMC', 1596654655.919, 30, 'NYSE', 157.25434937314296, 1000, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596655220.628, 31, 'NYSE', None, None, 158.04814448693645, 100, 159.06115617182738, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596655735.169, 32, 'NYSE', None, None, 159.19884580121405, 100, 159.75456004051446, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596656246.364, 33, 'NYSE', None, None, 160.41585305148678, 100, 160.51857675515197, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596656739.678, 34, 'NYSE', None, None, 161.21226380618808, 100, 162.0152855012612, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596657165.49, 35, 'NYSE', None, None, 159.90670522449295, 100, 161.79119755889852, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596657553.939, 36, 'NYSE', None, None, 159.12464242021792, 100, 160.06454982770535, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596658085.164, 37, 'NYSE', None, None, 159.5217025034599, 100, 159.52904284964558, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596658551.176, 38, 'NYSE', None, None, 156.74961256550824, 100, 157.1335917143105, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596659078.593, 39, 'NYSE', None, None, 159.64391627574986, 100, 160.7662129469828, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMC', 1596659546.063, 40, 'NYSE', 160.93912980809299, 15, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596659918.684, 41, 'NYSE', None, None, 157.14092539206288, 100, 157.65441676508283, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596660474.79, 42, 'NYSE', None, None, 161.45199653802365, 100, 163.10877064903784, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596660848.08, 43, 'NYSE', None, None, 159.61186487332512, 100, 161.1907372085959, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596661342.568, 44, 'NYSE', None, None, 159.855568449361, 100, 160.28256765475686, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596661890.569, 45, 'NYSE', None, None, 158.05188995146136, 100, 159.9214344032268, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596662203.979, 46, 'NYSE', None, None, 160.05984693614806, 100, 161.79818675457193, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596662744.079, 47, 'NYSE', None, None, 157.28831008764246, 100, 157.75423624001277, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596663278.08, 48, 'NYSE', None, None, 158.4415451801363, 100, 159.33449424694425, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596663666.012, 49, 'NYSE', None, None, 161.07280987928777, 100, 162.3103150826665, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMC', 1596664086.73, 50, 'NYSE', 159.16509768322962, 450, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596664603.16, 51, 'NYSE', None, None, 158.93292852855677, 100, 160.67839675726773, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596664915.111, 52, 'NYSE', None, None, 159.63840645517053, 100, 161.198325210199, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596665273.23, 53, 'NYSE', None, None, 157.02076242675915, 100, 157.07246176898562, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596665737.002, 54, 'NYSE', None, None, 158.0962845645997, 100, 159.70097746679414, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596666305.493, 55, 'NYSE', None, None, 161.61699242274082, 100, 163.15914944741806, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596666758.232, 56, 'NYSE', None, None, 158.7637383075062, 100, 160.00808594509124, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596667215.568, 57, 'NYSE', None, None, 157.28855861285055, 100, 157.5347017974472, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596667649.17, 58, 'NYSE', None, None, 159.085537468942, 100, 159.64908032361913, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596668052.533, 59, 'NYSE', None, None, 158.29323843374445, 100, 159.93483115604718, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMC', 1596668498.379, 60, 'NYSE', 161.15038759453128, 899, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596668976.032, 61, 'NYSE', None, None, 160.020040717258, 100, 161.00639150824577, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596669541.2, 62, 'NYSE', None, None, 156.92531965065865, 100, 157.27710936467705, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596669993.825, 63, 'NYSE', None, None, 157.89788093561026, 100, 158.30681983225355, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596670482.78, 64, 'NYSE', None, None, 160.86001264006967, 100, 161.65842474028642, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596670887.08, 65, 'NYSE', None, None, 160.4334084684355, 100, 160.46692615943277, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596671452.956, 66, 'NYSE', None, None, 156.9580211150952, 100, 158.82593106437753, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596671950.242, 67, 'NYSE', None, None, 159.90098045817933, 100, 161.4624278672129, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596672451.844, 68, 'NYSE', None, None, 156.85966525451494, 100, 157.75073969178476, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596672808.631, 69, 'NYSE', None, None, 158.66957709318854, 100, 159.90636884536244, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMC', 1596673243.709, 70, 'NYSE', 158.17853977377047, 869, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596673774.06, 71, 'NYSE', None, None, 159.50229028633717, 100, 160.88869781006096, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596674221.927, 72, 'NYSE', None, None, 161.32391443847155, 100, 162.33768163136455, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596674599.652, 73, 'NYSE', None, None, 161.29764593288013, 100, 161.56052859483793, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596674925.176, 74, 'NYSE', None, None, 156.84389994307173, 100, 157.49368965427715, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596675385.882, 75, 'NYSE', None, None, 158.4754927612993, 100, 159.59176071557616, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596675796.803, 76, 'NYSE', None, None, 158.88806266506185, 100, 159.86522917808776, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596676253.926, 77, 'NYSE', None, None, 160.63291459094546, 100, 162.14761770204498, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596676825.922, 78, 'NYSE', None, None, 159.75520523156555, 100, 159.89271802468699, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596677319.069, 79, 'NYSE', None, None, 157.21944797188357, 100, 158.46540199709975, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMC', 1596677875.659, 80, 'NYSE', 161.1250836712373, 713, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596678443.75, 81, 'NYSE', None, None, 160.53317511655214, 100, 162.39897514789172, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596678870.365, 82, 'NYSE', None, None, 157.3679039445819, 100, 158.23928023163958, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596679172.008, 83, 'NYSE', None, None, 159.82781729143753, 100, 160.620484576074, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596679713.369, 84, 'NYSE', None, None, 159.25355106635095, 100, 160.30002614806475, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596680079.576, 85, 'NYSE', None, None, 157.50176922317263, 100, 158.84301350193016, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596680445.539, 86, 'NYSE', None, None, 159.5760909538444, 100, 161.39447933492656, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596680979.564, 87, 'NYSE', None, None, 157.5351677936775, 100, 157.83737908620802, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596681432.617, 88, 'NYSE', None, None, 161.46316957841327, 100, 161.8721459506195, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596681761.308, 89, 'NYSE', None, None, 160.94421465908857, 100, 161.48729153344294, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMC', 1596682099.795, 90, 'NYSE', 159.71748170471383, 692, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596682412.672, 91, 'NYSE', None, None, 158.9106948162808, 100, 160.09124741427757, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596682756.928, 92, 'NYSE', None, None, 157.85308449770005, 100, 158.8710944507851, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596683210.101, 93, 'NYSE', None, None, 157.41815096503112, 100, 159.3540212431008, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596683595.969, 94, 'NYSE', None, None, 158.97366321904713, 100, 160.65763003980132, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596683912.91, 95, 'NYSE', None, None, 160.5629984583292, 100, 160.80048612395103, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596684465.366, 96, 'NYSE', None, None, 159.16729984177547, 100, 160.67633518145337, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596685004.375, 97, 'NYSE', None, None, 160.46993455958778, 100, 161.21938374728848, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596685320.631, 98, 'NYSE', None, None, 158.35362939077487, 100, 159.67609333710087, 100)
+Q ('Q', datetime.date(2020, 8, 5), 'Q', 'SYMC', 1596685613.294, 99, 'NYSE', None, None, 157.91512299628428, 100, 158.69463163720525, 100)
+T ('T', datetime.date(2020, 8, 5), 'T', 'SYMC', 1596685958.607, 100, 'NYSE', 160.61949262766208, 312, None, None, None, None)
+22/02/20 00:02:15 INFO PythonRunner: Times: total = 565, boot = 374, init = 127, finish = 64
+22/02/20 00:02:15 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 00:02:15 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 00:02:15 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 00:02:15 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 00:02:15 INFO CodeGenerator: Code generated in 19.4155 ms
+22/02/20 00:02:15 INFO CodeGenerator: Code generated in 7.3286 ms
+22/02/20 00:02:15 INFO CodeGenerator: Code generated in 12.0061 ms
+22/02/20 00:02:15 INFO CodecConfig: Compression: SNAPPY
+22/02/20 00:02:15 INFO CodecConfig: Compression: SNAPPY
+22/02/20 00:02:15 INFO ParquetOutputFormat: Parquet block size to 134217728
+22/02/20 00:02:15 INFO ParquetOutputFormat: Parquet page size to 1048576
+22/02/20 00:02:15 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+22/02/20 00:02:15 INFO ParquetOutputFormat: Dictionary is on
+22/02/20 00:02:15 INFO ParquetOutputFormat: Validation is off
+22/02/20 00:02:15 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+22/02/20 00:02:15 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+22/02/20 00:02:15 INFO ParquetOutputFormat: Page size checking is: estimated
+22/02/20 00:02:15 INFO ParquetOutputFormat: Min row count for page size check is: 100
+22/02/20 00:02:15 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+22/02/20 00:02:15 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "trade_dt",
+    "type" : "date",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "rec_type",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "symbol",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_tm",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_seq_nb",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "exchange",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "trade_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "trade_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "bid_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "bid_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "ask_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "ask_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional int32 trade_dt (DATE);
+  optional binary rec_type (UTF8);
+  optional binary symbol (UTF8);
+  optional float event_tm;
+  optional int32 event_seq_nb;
+  optional binary exchange (UTF8);
+  optional float trade_price;
+  optional int32 trade_size;
+  optional float bid_price;
+  optional int32 bid_size;
+  optional float ask_price;
+  optional int32 ask_size;
+}
+
+
+22/02/20 00:02:15 INFO CodecPool: Got brand-new compressor [.snappy]
+22/02/20 00:02:15 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 14181
+22/02/20 00:02:16 INFO CodecConfig: Compression: SNAPPY
+22/02/20 00:02:16 INFO CodecConfig: Compression: SNAPPY
+22/02/20 00:02:16 INFO ParquetOutputFormat: Parquet block size to 134217728
+22/02/20 00:02:16 INFO ParquetOutputFormat: Parquet page size to 1048576
+22/02/20 00:02:16 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+22/02/20 00:02:16 INFO ParquetOutputFormat: Dictionary is on
+22/02/20 00:02:16 INFO ParquetOutputFormat: Validation is off
+22/02/20 00:02:16 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+22/02/20 00:02:16 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+22/02/20 00:02:16 INFO ParquetOutputFormat: Page size checking is: estimated
+22/02/20 00:02:16 INFO ParquetOutputFormat: Min row count for page size check is: 100
+22/02/20 00:02:16 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+22/02/20 00:02:16 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "trade_dt",
+    "type" : "date",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "rec_type",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "symbol",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_tm",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_seq_nb",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "exchange",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "trade_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "trade_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "bid_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "bid_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "ask_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "ask_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional int32 trade_dt (DATE);
+  optional binary rec_type (UTF8);
+  optional binary symbol (UTF8);
+  optional float event_tm;
+  optional int32 event_seq_nb;
+  optional binary exchange (UTF8);
+  optional float trade_price;
+  optional int32 trade_size;
+  optional float bid_price;
+  optional int32 bid_size;
+  optional float ask_price;
+  optional int32 ask_size;
+}
+
+
+22/02/20 00:02:16 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 1389
+22/02/20 00:02:16 INFO FileOutputCommitter: Saved output of task 'attempt_20220220000213_0000_m_000000_0' to file:/C:/Spark/spark3/output_dir/_temporary/0/task_20220220000213_0000_m_000000
+22/02/20 00:02:16 INFO SparkHadoopMapRedUtil: attempt_20220220000213_0000_m_000000_0: Committed
+22/02/20 00:02:16 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 3535 bytes result sent to driver
+22/02/20 00:02:16 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, host.docker.internal, executor driver, partition 1, PROCESS_LOCAL, 7494 bytes)
+22/02/20 00:02:16 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+22/02/20 00:02:16 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2205 ms on host.docker.internal (executor driver) (1/2)
+22/02/20 00:02:16 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 51679
+22/02/20 00:02:16 INFO HadoopRDD: Input split: wasbs://stockstoragecontainer@aswastockstorageaccount.blob.core.windows.net/csv/2020-08-06/NYSE/part-00000-214fff0a-f408-466c-bb15-095cd8b648dc-c000.txt:0+34241
+C:\Users\aswa8\anaconda3\lib\site-packages\numpy\__init__.py:143: UserWarning: mkl-service package failed to import, therefore Intel(R) MKL initialization ensuring its correct out-of-the box operation under condition when Gnu OpenMP had already been loaded by Python process is not assured. Please install mkl-service package, see http://github.com/IntelPython/mkl-service
+  from . import _distributor_init
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596728341.293, 1, 'NYSE', None, None, 77.67912845315918, 100, 78.43735795018011, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596728840.398, 2, 'NYSE', None, None, 76.53373290281257, 100, 76.94424897980778, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596729386.402, 3, 'NYSE', None, None, 75.12060723753581, 100, 75.39408189677017, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596729839.522, 4, 'NYSE', None, None, 74.86368997537707, 100, 75.76860454779845, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596730193.165, 5, 'NYSE', None, None, 77.77650010059894, 100, 78.8010914613886, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596730735.618, 6, 'NYSE', None, None, 75.02947234883071, 100, 75.69057615526998, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596731154.959, 7, 'NYSE', None, None, 75.36016120122032, 100, 75.46482140816315, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596731674.929, 8, 'NYSE', None, None, 78.58504907098326, 100, 78.60169294366436, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596732084.664, 9, 'NYSE', None, None, 75.70570102127155, 100, 76.89215809308386, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMA', 1596732577.345, 10, 'NYSE', 74.4937735469071, 27, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596732942.576, 11, 'NYSE', None, None, 78.31055637708282, 100, 79.47635374656346, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596733399.617, 12, 'NYSE', None, None, 77.97817204740686, 100, 79.28954126455572, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596733945.921, 13, 'NYSE', None, None, 75.00774580189444, 100, 75.329899017342, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596734430.462, 14, 'NYSE', None, None, 75.2034625862805, 100, 77.09723627799544, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596734839.528, 15, 'NYSE', None, None, 75.49015416923808, 100, 76.72422161259217, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596735140.377, 16, 'NYSE', None, None, 77.77659540343343, 100, 78.86235377249426, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596735585.936, 17, 'NYSE', None, None, 77.31390620927456, 100, 79.10031949730782, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596735956.017, 18, 'NYSE', None, None, 79.17367290487364, 100, 80.35080808400612, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596736396.208, 19, 'NYSE', None, None, 77.16183221927379, 100, 78.59092887559557, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMA', 1596736811.545, 20, 'NYSE', 76.16119459402981, 315, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596737381.326, 21, 'NYSE', None, None, 74.884617278851, 100, 75.63901010296551, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596737902.965, 22, 'NYSE', None, None, 76.77406463345044, 100, 78.56097423665531, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596738307.742, 23, 'NYSE', None, None, 75.50097292500807, 100, 75.62914287529526, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596738804.195, 24, 'NYSE', None, None, 78.62596462109627, 100, 80.02228030115273, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596739115.367, 25, 'NYSE', None, None, 79.24137993849361, 100, 79.52636392718142, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596739534.083, 26, 'NYSE', None, None, 77.7558594574886, 100, 78.79128290701789, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596739975.882, 27, 'NYSE', None, None, 76.99782591393891, 100, 78.24038396181756, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596740481.888, 28, 'NYSE', None, None, 76.88607003039235, 100, 77.37887803589072, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596740811.806, 29, 'NYSE', None, None, 77.77401306159616, 100, 78.81670358504341, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMA', 1596741117.308, 30, 'NYSE', 76.89963550257767, 755, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596741613.217, 31, 'NYSE', None, None, 77.54600900193435, 100, 78.91553801932147, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596742037.268, 32, 'NYSE', None, None, 75.14476249264526, 100, 76.41066209848552, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596742348.864, 33, 'NYSE', None, None, 77.13289579176785, 100, 77.59677977007688, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596742665.165, 34, 'NYSE', None, None, 77.46286332752824, 100, 78.79643278015841, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596743197.106, 35, 'NYSE', None, None, 79.29898094381345, 100, 81.2745702134831, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596743699.362, 36, 'NYSE', None, None, 77.92609368622715, 100, 79.1672350701433, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596744124.803, 37, 'NYSE', None, None, 74.69977692511625, 100, 75.93272991995036, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596744590.673, 38, 'NYSE', None, None, 76.63519600180598, 100, 76.80908701679996, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596745063.574, 39, 'NYSE', None, None, 75.43854142558534, 100, 75.5964366393803, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMA', 1596745633.014, 40, 'NYSE', 77.1155186423281, 81, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596746087.085, 41, 'NYSE', None, None, 78.82067769631522, 100, 80.75448341534019, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596746531.812, 42, 'NYSE', None, None, 77.09913925672284, 100, 77.19794227333365, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596746938.298, 43, 'NYSE', None, None, 74.75747167270546, 100, 74.99914520482766, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596747452.466, 44, 'NYSE', None, None, 74.83877703108848, 100, 75.40668810027327, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596747860.492, 45, 'NYSE', None, None, 76.13854904625202, 100, 78.06057907336418, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596748369.172, 46, 'NYSE', None, None, 76.39780084178598, 100, 78.06379554173964, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596748665.541, 47, 'NYSE', None, None, 77.17355871920665, 100, 79.01757070882466, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596749160.294, 48, 'NYSE', None, None, 75.10605989022301, 100, 75.8425200816335, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596749570.257, 49, 'NYSE', None, None, 77.85228040178876, 100, 79.05395214401088, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMA', 1596749948.521, 50, 'NYSE', 76.37442161362104, 744, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596750483.872, 51, 'NYSE', None, None, 78.20019031517049, 100, 80.11614085947541, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596750931.634, 52, 'NYSE', None, None, 77.20002687901275, 100, 77.46213855712405, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596751449.571, 53, 'NYSE', None, None, 77.48859849926536, 100, 78.93310011518543, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596751995.559, 54, 'NYSE', None, None, 78.31109401810035, 100, 79.75502479491647, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596752529.718, 55, 'NYSE', None, None, 79.20979510212422, 100, 80.53262306685491, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596752859.821, 56, 'NYSE', None, None, 77.0795318654348, 100, 78.33919065813802, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596753226.316, 57, 'NYSE', None, None, 75.55968319703676, 100, 75.80726243086237, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596753632.472, 58, 'NYSE', None, None, 75.95807392268793, 100, 76.38929760444795, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596754206.784, 59, 'NYSE', None, None, 75.95351421956174, 100, 75.9800697386948, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMA', 1596754738.633, 60, 'NYSE', 78.32363638620622, 857, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596755071.576, 61, 'NYSE', None, None, 76.56333732133346, 100, 76.68272088122552, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596755612.631, 62, 'NYSE', None, None, 79.14209003156957, 100, 80.24765332001878, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596756087.885, 63, 'NYSE', None, None, 78.07619642067817, 100, 79.22127335841192, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596756495.902, 64, 'NYSE', None, None, 79.16484693662996, 100, 80.73225110733966, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596756844.666, 65, 'NYSE', None, None, 74.99928488882026, 100, 75.98745250254919, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596757411.929, 66, 'NYSE', None, None, 76.76758721782973, 100, 77.52992466734187, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596757977.953, 67, 'NYSE', None, None, 76.88739606088755, 100, 77.7133192050788, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596758475.431, 68, 'NYSE', None, None, 79.32805179896513, 100, 81.22252869517914, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596758938.256, 69, 'NYSE', None, None, 75.54449587635618, 100, 77.16118144376208, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMA', 1596759268.899, 70, 'NYSE', 78.23471404145394, 125, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596759784.317, 71, 'NYSE', None, None, 76.48323231205478, 100, 76.7314199378661, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596760277.642, 72, 'NYSE', None, None, 77.14931836432513, 100, 78.09053364691815, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596760623.342, 73, 'NYSE', None, None, 75.20446212236945, 100, 76.86818770421502, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596761062.06, 74, 'NYSE', None, None, 77.13293071755356, 100, 78.4012401215132, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596761631.793, 75, 'NYSE', None, None, 74.47250765514704, 100, 76.3295636985494, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596762096.972, 76, 'NYSE', None, None, 75.43971655669715, 100, 75.57063851945786, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596762530.076, 77, 'NYSE', None, None, 78.63833169767423, 100, 79.52327892512565, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596762994.266, 78, 'NYSE', None, None, 78.9401878950973, 100, 79.57969114655128, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596763296.172, 79, 'NYSE', None, None, 75.13543777361556, 100, 75.38921103543053, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMA', 1596763702.629, 80, 'NYSE', 76.52898141486219, 98, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596764105.81, 81, 'NYSE', None, None, 75.87112924685681, 100, 77.82034118291077, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596764622.686, 82, 'NYSE', None, None, 76.73076622201476, 100, 77.51380829820091, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596765009.552, 83, 'NYSE', None, None, 79.36629577489073, 100, 80.46915228648693, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596765478.964, 84, 'NYSE', None, None, 74.86010465788733, 100, 75.57482161878288, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596766010.524, 85, 'NYSE', None, None, 75.3206126733856, 100, 77.17798209452987, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596766562.926, 86, 'NYSE', None, None, 76.68663101058802, 100, 77.60120958626024, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596767125.947, 87, 'NYSE', None, None, 77.01157835762984, 100, 78.78747521767109, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596767495.793, 88, 'NYSE', None, None, 78.22653075350881, 100, 79.0199065451144, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596767983.453, 89, 'NYSE', None, None, 78.19145456562538, 100, 79.01832489855987, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMA', 1596768550.946, 90, 'NYSE', 75.71484703599852, 546, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596769021.766, 91, 'NYSE', None, None, 79.25041321651268, 100, 79.28607550975724, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596769480.263, 92, 'NYSE', None, None, 75.75031441064301, 100, 77.6674443132043, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596769839.028, 93, 'NYSE', None, None, 78.67092041531649, 100, 79.76747290267174, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596770143.645, 94, 'NYSE', None, None, 75.45908032039709, 100, 75.62041963500181, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596770475.18, 95, 'NYSE', None, None, 76.38393518539786, 100, 76.80352276445885, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596770916.146, 96, 'NYSE', None, None, 75.80962819675109, 100, 76.12942745037904, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596771403.987, 97, 'NYSE', None, None, 78.62732313924076, 100, 78.88502297655366, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596771831.347, 98, 'NYSE', None, None, 75.68045695226793, 100, 75.89484846999227, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMA', 1596772309.094, 99, 'NYSE', None, None, 76.5382010839026, 100, 76.82801387203371, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMA', 1596772818.406, 100, 'NYSE', 76.30847130527823, 471, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596728277.736, 1, 'NYSE', None, None, 34.22042126476181, 100, 35.47752046389134, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596728757.819, 2, 'NYSE', None, None, 32.84679235263457, 100, 33.090589359618065, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596729179.455, 3, 'NYSE', None, None, 33.282481580927204, 100, 35.04488320704174, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596729548.049, 4, 'NYSE', None, None, 35.80141900363462, 100, 36.8613695404052, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596730018.965, 5, 'NYSE', None, None, 34.317248462785926, 100, 35.70876185644222, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596730471.761, 6, 'NYSE', None, None, 34.99884296895081, 100, 36.79022951933338, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596730962.912, 7, 'NYSE', None, None, 34.56350905013758, 100, 35.022187825910116, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596731281.078, 8, 'NYSE', None, None, 34.05226202049286, 100, 35.69485771979329, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596731835.536, 9, 'NYSE', None, None, 34.076122781883775, 100, 35.42673578554051, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMB', 1596732342.992, 10, 'NYSE', 33.85934124362505, 314, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596732757.522, 11, 'NYSE', None, None, 32.09809341592254, 100, 32.47902071842063, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596733180.665, 12, 'NYSE', None, None, 36.28203075761201, 100, 36.85958882221652, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596733701.481, 13, 'NYSE', None, None, 35.03385332892808, 100, 35.96939236736614, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596734212.626, 14, 'NYSE', None, None, 32.22775759962986, 100, 33.826716414517904, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596734527.632, 15, 'NYSE', None, None, 33.913494537278986, 100, 35.82888723434745, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596735047.287, 16, 'NYSE', None, None, 32.94591606500395, 100, 33.44543827772832, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596735565.984, 17, 'NYSE', None, None, 35.643905717273825, 100, 36.781946746179536, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596736102.755, 18, 'NYSE', None, None, 33.54798944098279, 100, 33.80527742782961, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596736449.346, 19, 'NYSE', None, None, 33.46308599502262, 100, 35.22344387201991, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMB', 1596736900.839, 20, 'NYSE', 32.92885999370572, 270, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596737372.442, 21, 'NYSE', None, None, 34.826921353672, 100, 36.23138734802424, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596737768.948, 22, 'NYSE', None, None, 36.105740403216124, 100, 37.45751243545, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596738118.911, 23, 'NYSE', None, None, 35.94181248639138, 100, 37.532394759785184, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596738660.095, 24, 'NYSE', None, None, 33.072382405139976, 100, 34.09166855576172, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596738962.016, 25, 'NYSE', None, None, 35.153638052813285, 100, 35.72927170755967, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596739474.127, 26, 'NYSE', None, None, 34.33030730884962, 100, 35.909794816836666, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596739914.316, 27, 'NYSE', None, None, 35.31837660504116, 100, 35.40870000593286, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596740340.012, 28, 'NYSE', None, None, 33.10572424623211, 100, 33.88276388577321, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596740787.083, 29, 'NYSE', None, None, 36.457589906706644, 100, 37.49295840387546, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMB', 1596741207.041, 30, 'NYSE', 33.68609345741924, 792, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596741602.124, 31, 'NYSE', None, None, 35.718366500477444, 100, 35.72076581235541, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596741990.857, 32, 'NYSE', None, None, 34.633000513654316, 100, 36.434630230609976, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596742484.666, 33, 'NYSE', None, None, 32.356456557691104, 100, 33.06350055366685, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596742805.508, 34, 'NYSE', None, None, 35.37824048579033, 100, 36.944386087100376, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596743371.272, 35, 'NYSE', None, None, 31.798528601633056, 100, 32.7296745278018, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596743937.392, 36, 'NYSE', None, None, 32.383061847257956, 100, 34.087731227005456, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596744450.746, 37, 'NYSE', None, None, 32.9209400815143, 100, 34.81973514449528, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596744921.689, 38, 'NYSE', None, None, 36.44402224445739, 100, 37.75801839816134, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596745479.65, 39, 'NYSE', None, None, 31.945055350647245, 100, 33.670524892091095, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMB', 1596745782.34, 40, 'NYSE', 35.07167733717264, 852, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596746227.194, 41, 'NYSE', None, None, 33.8543525975664, 100, 35.67678225107982, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596746688.69, 42, 'NYSE', None, None, 32.34316210285671, 100, 32.71396550395908, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596747242.5, 43, 'NYSE', None, None, 33.299639055002054, 100, 34.96186031027472, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596747795.079, 44, 'NYSE', None, None, 33.94623924692205, 100, 34.49800622583387, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596748370.874, 45, 'NYSE', None, None, 33.62967473508892, 100, 34.09220298968045, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596748761.797, 46, 'NYSE', None, None, 32.84999216143599, 100, 33.564036116517585, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596749270.676, 47, 'NYSE', None, None, 33.48951229611914, 100, 33.996316638637516, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596749719.378, 48, 'NYSE', None, None, 36.02401555892942, 100, 36.77417825194701, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596750017.852, 49, 'NYSE', None, None, 36.209807308656835, 100, 38.00703670113677, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMB', 1596750381.701, 50, 'NYSE', 34.834840841239476, 441, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596750871.291, 51, 'NYSE', None, None, 35.60953519701248, 100, 37.52537942893473, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596751445.355, 52, 'NYSE', None, None, 32.477552709954246, 100, 32.75837587270137, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596751946.283, 53, 'NYSE', None, None, 33.92468838458613, 100, 34.55241649158398, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596752271.948, 54, 'NYSE', None, None, 34.42989870613784, 100, 34.57537103550222, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596752616.848, 55, 'NYSE', None, None, 34.62026368565802, 100, 36.51439217511288, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596752987.955, 56, 'NYSE', None, None, 34.55306505453517, 100, 34.75007513040182, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596753459.793, 57, 'NYSE', None, None, 32.12111916963613, 100, 32.218678093580124, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596753881.816, 58, 'NYSE', None, None, 35.15626444829849, 100, 35.48117681969893, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596754211.776, 59, 'NYSE', None, None, 34.669383234070345, 100, 35.54003533791274, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMB', 1596754635.217, 60, 'NYSE', 33.318020862243706, 773, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596755026.725, 61, 'NYSE', None, None, 36.57152146050891, 100, 37.799913734582354, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596755452.829, 62, 'NYSE', None, None, 36.602427387653805, 100, 36.728706478634365, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596755899.749, 63, 'NYSE', None, None, 33.741496545682615, 100, 34.08022839591746, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596756310.95, 64, 'NYSE', None, None, 32.96949855230071, 100, 34.82374940625649, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596756870.727, 65, 'NYSE', None, None, 32.187772418640876, 100, 32.55764101656324, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596757230.549, 66, 'NYSE', None, None, 36.41039598194495, 100, 37.21901764041855, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596757667.379, 67, 'NYSE', None, None, 35.655718534490155, 100, 36.94651146357889, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596757957.828, 68, 'NYSE', None, None, 35.805793618254164, 100, 36.16367101821172, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596758365.335, 69, 'NYSE', None, None, 36.338802534932185, 100, 36.84257346394923, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMB', 1596758789.531, 70, 'NYSE', 33.56583414688106, 578, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596759261.67, 71, 'NYSE', None, None, 36.22941588493857, 100, 36.58668001929218, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596759679.685, 72, 'NYSE', None, None, 33.70023220955683, 100, 33.74465952681078, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596760182.968, 73, 'NYSE', None, None, 35.19272042639489, 100, 36.58654926609945, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596760604.768, 74, 'NYSE', None, None, 35.25480152880733, 100, 36.404101963312556, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596760916.846, 75, 'NYSE', None, None, 36.62190617517004, 100, 37.161152179229546, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596761440.593, 76, 'NYSE', None, None, 34.342261362186846, 100, 35.34669831808836, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596761855.056, 77, 'NYSE', None, None, 31.978970860811977, 100, 32.643944136511806, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596762394.431, 78, 'NYSE', None, None, 33.01717975893721, 100, 34.27842365697289, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596762832.986, 79, 'NYSE', None, None, 33.38428072563287, 100, 34.00100494494078, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMB', 1596763310.111, 80, 'NYSE', 33.10891951344721, 718, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596763617.935, 81, 'NYSE', None, None, 35.14757975791808, 100, 35.99255487594363, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596764044.519, 82, 'NYSE', None, None, 35.82808702333264, 100, 36.27076003031883, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596764380.298, 83, 'NYSE', None, None, 31.838659073860853, 100, 32.93320844058228, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596764830.58, 84, 'NYSE', None, None, 35.99615787210453, 100, 36.59053180201557, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596765325.643, 85, 'NYSE', None, None, 31.90461386340772, 100, 33.332851527982655, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596765861.427, 86, 'NYSE', None, None, 33.135343900630446, 100, 33.56997138385951, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596766325.795, 87, 'NYSE', None, None, 35.4919274952243, 100, 37.4272840074271, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596766884.084, 88, 'NYSE', None, None, 33.491746090437466, 100, 34.13826386498164, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596767249.042, 89, 'NYSE', None, None, 36.2717999945762, 100, 36.667836229632584, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMB', 1596767765.757, 90, 'NYSE', 32.643285785428255, 220, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596768089.039, 91, 'NYSE', None, None, 35.88094284078761, 100, 36.4066600451123, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596768524.101, 92, 'NYSE', None, None, 32.006400702750575, 100, 33.149146689596066, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596768846.808, 93, 'NYSE', None, None, 32.051608824865795, 100, 33.76190456441052, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596769283.273, 94, 'NYSE', None, None, 34.51481997846357, 100, 36.30438251672071, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596769723.732, 95, 'NYSE', None, None, 35.198557910968006, 100, 36.92019063131293, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596770081.103, 96, 'NYSE', None, None, 31.995006905580528, 100, 33.899873605407244, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596770619.083, 97, 'NYSE', None, None, 31.980172796088976, 100, 33.03486177857619, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596771079.68, 98, 'NYSE', None, None, 36.35605022145643, 100, 37.975065777333334, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMB', 1596771410.686, 99, 'NYSE', None, None, 36.18482114386065, 100, 37.407363371235256, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMB', 1596771960.523, 100, 'NYSE', 35.9247452343323, 741, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596728265.182, 1, 'NYSE', None, None, 160.92615163863337, 100, 161.74260959804047, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596728716.789, 2, 'NYSE', None, None, 161.3751986611634, 100, 163.001779007097, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596729109.827, 3, 'NYSE', None, None, 159.36830980740774, 100, 159.5220890207238, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596729514.959, 4, 'NYSE', None, None, 158.1875219863764, 100, 158.8834623989856, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596729899.748, 5, 'NYSE', None, None, 157.15078151235548, 100, 157.9704004757064, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596730196.817, 6, 'NYSE', None, None, 157.99574179536077, 100, 159.2862920891969, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596730735.079, 7, 'NYSE', None, None, 157.09470705141612, 100, 158.9380110821926, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596731290.955, 8, 'NYSE', None, None, 160.75978866026549, 100, 161.00616864574502, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596731680.875, 9, 'NYSE', None, None, 157.34511479971812, 100, 158.47583139099333, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMC', 1596732162.097, 10, 'NYSE', 157.26690601777602, 393, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596732508.752, 11, 'NYSE', None, None, 158.88073824850466, 100, 160.07489384012516, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596732972.92, 12, 'NYSE', None, None, 160.37903920540873, 100, 160.48655162347174, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596733378.675, 13, 'NYSE', None, None, 158.03838165179127, 100, 158.5695078200935, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596733850.687, 14, 'NYSE', None, None, 157.62157660351656, 100, 158.0540108721122, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596734290.671, 15, 'NYSE', None, None, 158.6393448608828, 100, 159.9563169957686, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596734715.022, 16, 'NYSE', None, None, 161.01924737751796, 100, 162.16675338905176, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596735260.858, 17, 'NYSE', None, None, 161.30848030400455, 100, 163.20560479106038, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596735585.104, 18, 'NYSE', None, None, 157.26456003806757, 100, 159.11869290031726, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596735878.964, 19, 'NYSE', None, None, 160.9469942093211, 100, 162.09919470346622, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMC', 1596736351.939, 20, 'NYSE', 160.15278938513183, 954, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596736715.979, 21, 'NYSE', None, None, 156.94297922639885, 100, 157.64641781401042, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596737193.951, 22, 'NYSE', None, None, 160.87499285916607, 100, 161.66911625319906, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596737535.58, 23, 'NYSE', None, None, 158.52506585884936, 100, 160.12296878071703, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596737978.357, 24, 'NYSE', None, None, 160.48497573902895, 100, 161.76530951455013, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596738414.152, 25, 'NYSE', None, None, 159.36518281547555, 100, 160.2399076942918, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596738847.373, 26, 'NYSE', None, None, 157.21597592275847, 100, 158.04338295781218, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596739297.111, 27, 'NYSE', None, None, 159.16627396205388, 100, 160.14781931728479, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596739719.503, 28, 'NYSE', None, None, 161.41201878822045, 100, 162.7180385213505, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596740183.122, 29, 'NYSE', None, None, 156.85314611501045, 100, 158.2942153713535, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMC', 1596740519.806, 30, 'NYSE', 158.06445001940594, 879, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596741002.723, 31, 'NYSE', None, None, 159.54922734158745, 100, 159.6251379075199, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596741294.662, 32, 'NYSE', None, None, 157.71166149994355, 100, 159.34694545037547, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596741640.193, 33, 'NYSE', None, None, 159.4362977542836, 100, 160.7125532412017, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596742199.659, 34, 'NYSE', None, None, 159.70300113654528, 100, 161.58322669601077, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596742700.813, 35, 'NYSE', None, None, 157.72217756711706, 100, 157.7367761418688, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596743200.42, 36, 'NYSE', None, None, 159.94415541435066, 100, 160.91061432061136, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596743586.92, 37, 'NYSE', None, None, 157.69724966313765, 100, 159.63641704877145, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596743890.443, 38, 'NYSE', None, None, 159.05920037198254, 100, 159.17368012791715, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596744456.643, 39, 'NYSE', None, None, 158.2936243561856, 100, 158.69109396587652, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMC', 1596744955.659, 40, 'NYSE', 161.47708052000078, 232, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596745324.238, 41, 'NYSE', None, None, 157.94653090311246, 100, 158.1699509857606, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596745727.002, 42, 'NYSE', None, None, 157.74652717364165, 100, 159.1572853809763, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596746123.759, 43, 'NYSE', None, None, 161.15596854602234, 100, 161.73035543201524, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596746456.737, 44, 'NYSE', None, None, 160.31326050296474, 100, 161.22591748508674, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596746775.009, 45, 'NYSE', None, None, 157.16514930123427, 100, 157.25003783784564, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596747102.016, 46, 'NYSE', None, None, 159.89870087441824, 100, 160.16226486331587, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596747416.062, 47, 'NYSE', None, None, 158.40560932179685, 100, 158.80118915911254, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596747726.092, 48, 'NYSE', None, None, 158.47369372761017, 100, 159.90405715718055, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596748175.813, 49, 'NYSE', None, None, 158.09346510899186, 100, 159.8165706999653, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMC', 1596748716.925, 50, 'NYSE', 158.3623114066918, 452, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596749113.089, 51, 'NYSE', None, None, 157.31540718747382, 100, 159.31448165141643, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596749494.386, 52, 'NYSE', None, None, 158.56588333629261, 100, 158.80625864699584, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596749923.083, 53, 'NYSE', None, None, 160.22442750716814, 100, 161.23738523914173, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596750394.772, 54, 'NYSE', None, None, 161.2837938401774, 100, 163.05151800793888, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596750879.028, 55, 'NYSE', None, None, 156.90952006642252, 100, 157.28175402864164, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596751335.22, 56, 'NYSE', None, None, 159.3946222461193, 100, 161.34287470319924, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596751733.626, 57, 'NYSE', None, None, 159.6081313005516, 100, 160.94203411970793, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596752090.899, 58, 'NYSE', None, None, 160.34995286147716, 100, 161.70460620054743, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596752387.398, 59, 'NYSE', None, None, 159.25356235188045, 100, 160.67056820474278, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMC', 1596752691.731, 60, 'NYSE', 161.56712679946747, 912, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596753064.213, 61, 'NYSE', None, None, 158.14118627542456, 100, 158.68661023015503, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596753423.627, 62, 'NYSE', None, None, 158.13061010230996, 100, 159.8875277703475, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596753909.49, 63, 'NYSE', None, None, 160.58996505423815, 100, 162.111289055825, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596754388.451, 64, 'NYSE', None, None, 159.68220039818317, 100, 160.06463404888194, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596754871.797, 65, 'NYSE', None, None, 160.6606319570788, 100, 162.63013738213803, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596755368.972, 66, 'NYSE', None, None, 160.68074066272612, 100, 161.234137497789, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596755795.296, 67, 'NYSE', None, None, 157.37571225351542, 100, 158.9490078290745, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596756307.147, 68, 'NYSE', None, None, 160.5142608102575, 100, 160.62961842493547, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596756660.375, 69, 'NYSE', None, None, 156.88495184901944, 100, 158.06398199475043, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMC', 1596757077.479, 70, 'NYSE', 161.3653136867498, 271, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596757651.84, 71, 'NYSE', None, None, 158.0122691298192, 100, 159.11681926004098, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596758201.473, 72, 'NYSE', None, None, 158.41725320325884, 100, 160.0996217868491, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596758566.502, 73, 'NYSE', None, None, 159.26206859310858, 100, 161.02055215286416, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596759079.994, 74, 'NYSE', None, None, 158.66587628800605, 100, 160.09783900717, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596759608.398, 75, 'NYSE', None, None, 157.64994446119016, 100, 159.07713026848913, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596759979.798, 76, 'NYSE', None, None, 159.2978780475707, 100, 160.83405603557338, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596760542.03, 77, 'NYSE', None, None, 160.7888947180925, 100, 161.66222343964657, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596761062.617, 78, 'NYSE', None, None, 159.23930485461608, 100, 160.90922535475354, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596761509.774, 79, 'NYSE', None, None, 156.9312546419874, 100, 158.85635495817974, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMC', 1596762052.082, 80, 'NYSE', 159.1477102473543, 931, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596762600.145, 81, 'NYSE', None, None, 159.83960401274908, 100, 160.50081574028758, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596763108.06, 82, 'NYSE', None, None, 159.93613358833267, 100, 161.54578866478457, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596763632.12, 83, 'NYSE', None, None, 159.85618852223178, 100, 161.59544972251783, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596764051.418, 84, 'NYSE', None, None, 158.34967836669705, 100, 158.5143409207027, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596764339.69, 85, 'NYSE', None, None, 157.37224394671824, 100, 158.90364469519656, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596764730.177, 86, 'NYSE', None, None, 159.94637131642352, 100, 160.8590242607038, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596765170.558, 87, 'NYSE', None, None, 158.4915237193475, 100, 159.8231174012586, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596765682.615, 88, 'NYSE', None, None, 159.97977650496713, 100, 160.6894466467967, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596766014.361, 89, 'NYSE', None, None, 160.5261203264472, 100, 160.6146379433702, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMC', 1596766461.737, 90, 'NYSE', 157.62836162691207, 837, None, None, None, None)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596766870.807, 91, 'NYSE', None, None, 161.2837649599841, 100, 161.62230230534135, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596767442.186, 92, 'NYSE', None, None, 158.2090190778883, 100, 159.75037995492994, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596767893.919, 93, 'NYSE', None, None, 160.70884750744287, 100, 161.12077385496534, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596768417.338, 94, 'NYSE', None, None, 158.4328460556734, 100, 159.29149508605965, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596768853.307, 95, 'NYSE', None, None, 158.40748406708445, 100, 159.9345489072113, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596769300.132, 96, 'NYSE', None, None, 160.33721147366091, 100, 161.1670525121564, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596769761.713, 97, 'NYSE', None, None, 158.7222936170963, 100, 159.17896492339173, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596770318.067, 98, 'NYSE', None, None, 160.45135157273083, 100, 162.4428834176788, 100)
+Q ('Q', datetime.date(2020, 8, 6), 'Q', 'SYMC', 1596770854.546, 99, 'NYSE', None, None, 159.50664417328284, 100, 159.708657615948, 100)
+T ('T', datetime.date(2020, 8, 6), 'T', 'SYMC', 1596771177.735, 100, 'NYSE', 159.38221783349758, 516, None, None, None, None)
+22/02/20 00:02:17 INFO PythonRunner: Times: total = 607, boot = 463, init = 93, finish = 51
+22/02/20 00:02:17 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 00:02:17 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 00:02:17 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 00:02:17 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 00:02:17 INFO CodecConfig: Compression: SNAPPY
+22/02/20 00:02:17 INFO CodecConfig: Compression: SNAPPY
+22/02/20 00:02:17 INFO ParquetOutputFormat: Parquet block size to 134217728
+22/02/20 00:02:17 INFO ParquetOutputFormat: Parquet page size to 1048576
+22/02/20 00:02:17 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+22/02/20 00:02:17 INFO ParquetOutputFormat: Dictionary is on
+22/02/20 00:02:17 INFO ParquetOutputFormat: Validation is off
+22/02/20 00:02:17 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+22/02/20 00:02:17 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+22/02/20 00:02:17 INFO ParquetOutputFormat: Page size checking is: estimated
+22/02/20 00:02:17 INFO ParquetOutputFormat: Min row count for page size check is: 100
+22/02/20 00:02:17 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+22/02/20 00:02:17 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "trade_dt",
+    "type" : "date",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "rec_type",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "symbol",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_tm",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_seq_nb",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "exchange",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "trade_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "trade_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "bid_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "bid_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "ask_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "ask_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional int32 trade_dt (DATE);
+  optional binary rec_type (UTF8);
+  optional binary symbol (UTF8);
+  optional float event_tm;
+  optional int32 event_seq_nb;
+  optional binary exchange (UTF8);
+  optional float trade_price;
+  optional int32 trade_size;
+  optional float bid_price;
+  optional int32 bid_size;
+  optional float ask_price;
+  optional int32 ask_size;
+}
+
+
+22/02/20 00:02:17 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 14213
+22/02/20 00:02:17 INFO CodecConfig: Compression: SNAPPY
+22/02/20 00:02:17 INFO CodecConfig: Compression: SNAPPY
+22/02/20 00:02:17 INFO ParquetOutputFormat: Parquet block size to 134217728
+22/02/20 00:02:17 INFO ParquetOutputFormat: Parquet page size to 1048576
+22/02/20 00:02:17 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+22/02/20 00:02:17 INFO ParquetOutputFormat: Dictionary is on
+22/02/20 00:02:17 INFO ParquetOutputFormat: Validation is off
+22/02/20 00:02:17 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+22/02/20 00:02:17 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+22/02/20 00:02:17 INFO ParquetOutputFormat: Page size checking is: estimated
+22/02/20 00:02:17 INFO ParquetOutputFormat: Min row count for page size check is: 100
+22/02/20 00:02:17 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+22/02/20 00:02:17 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "trade_dt",
+    "type" : "date",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "rec_type",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "symbol",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_tm",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_seq_nb",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "exchange",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "trade_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "trade_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "bid_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "bid_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "ask_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "ask_size",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional int32 trade_dt (DATE);
+  optional binary rec_type (UTF8);
+  optional binary symbol (UTF8);
+  optional float event_tm;
+  optional int32 event_seq_nb;
+  optional binary exchange (UTF8);
+  optional float trade_price;
+  optional int32 trade_size;
+  optional float bid_price;
+  optional int32 bid_size;
+  optional float ask_price;
+  optional int32 ask_size;
+}
+
+
+22/02/20 00:02:17 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 1397
+22/02/20 00:02:17 INFO FileOutputCommitter: Saved output of task 'attempt_20220220000213_0000_m_000001_1' to file:/C:/Spark/spark3/output_dir/_temporary/0/task_20220220000213_0000_m_000001
+22/02/20 00:02:17 INFO SparkHadoopMapRedUtil: attempt_20220220000213_0000_m_000001_1: Committed
+22/02/20 00:02:17 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 3492 bytes result sent to driver
+22/02/20 00:02:17 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1292 ms on host.docker.internal (executor driver) (2/2)
+22/02/20 00:02:17 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+22/02/20 00:02:17 INFO DAGScheduler: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0) finished in 3.676 s
+22/02/20 00:02:17 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+22/02/20 00:02:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+22/02/20 00:02:17 INFO DAGScheduler: Job 0 finished: parquet at NativeMethodAccessorImpl.java:0, took 3.722798 s
+22/02/20 00:02:17 INFO FileFormatWriter: Write Job 67cbe646-be43-47c5-bc60-e146fc591d96 committed.
+22/02/20 00:02:17 INFO FileFormatWriter: Finished processing stats for write job 67cbe646-be43-47c5-bc60-e146fc591d96.
+22/02/20 00:02:17 INFO SparkContext: Invoking stop() from shutdown hook
+22/02/20 00:02:17 INFO SparkUI: Stopped Spark web UI at http://host.docker.internal:4040
+22/02/20 00:02:17 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+22/02/20 00:02:17 INFO MemoryStore: MemoryStore cleared
+22/02/20 00:02:17 INFO BlockManager: BlockManager stopped
+22/02/20 00:02:17 INFO BlockManagerMaster: BlockManagerMaster stopped
+22/02/20 00:02:17 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+22/02/20 00:02:17 INFO SparkContext: Successfully stopped SparkContext
+22/02/20 00:02:17 INFO ShutdownHookManager: Shutdown hook called
+22/02/20 00:02:17 INFO ShutdownHookManager: Deleting directory C:\Users\aswa8\AppData\Local\Temp\spark-9e3927a2-af24-47df-a8d0-e5e1d71a7389
+22/02/20 00:02:17 INFO ShutdownHookManager: Deleting directory C:\Users\aswa8\AppData\Local\Temp\spark-9e3927a2-af24-47df-a8d0-e5e1d71a7389\pyspark-d90ab2f9-5851-4d63-90aa-0b4c132cc2f3
+22/02/20 00:02:17 INFO ShutdownHookManager: Deleting directory C:\Users\aswa8\AppData\Local\Temp\spark-19ca7fe3-dfab-43e8-9e54-2c4e0e0b8aed
+22/02/20 00:02:17 INFO MetricsSystemImpl: Stopping azure-file-system metrics system...
+22/02/20 00:02:17 INFO MetricsSystemImpl: azure-file-system metrics system stopped.
+22/02/20 00:02:17 INFO MetricsSystemImpl: azure-file-system metrics system shutdown complete.
