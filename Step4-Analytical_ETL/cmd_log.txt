@@ -1,0 +1,482 @@
+C:\Spark\spark3>bin\spark-submit "C:\Users\aswa8\OneDrive - Queen's University\Desktop\Springboard\Guided_Capstone\Step4-Analytical_ETL\analytical_etl.py"
+log4j:ERROR Could not read configuration file from URL [file:log4j.properties].
+java.io.FileNotFoundException: log4j.properties (The system cannot find the file specified)
+        at java.io.FileInputStream.open0(Native Method)
+        at java.io.FileInputStream.open(FileInputStream.java:195)
+        at java.io.FileInputStream.<init>(FileInputStream.java:138)
+        at java.io.FileInputStream.<init>(FileInputStream.java:93)
+        at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+        at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+        at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:557)
+        at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+        at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+        at org.apache.spark.internal.Logging.initializeLogging(Logging.scala:128)
+        at org.apache.spark.internal.Logging.initializeLogIfNecessary(Logging.scala:111)
+        at org.apache.spark.internal.Logging.initializeLogIfNecessary$(Logging.scala:105)
+        at org.apache.spark.deploy.SparkSubmit.initializeLogIfNecessary(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:83)
+        at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1007)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1016)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+log4j:ERROR Ignoring configuration file [file:log4j.properties].
+22/02/20 14:16:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+C:\Users\aswa8\anaconda3\lib\site-packages\numpy\__init__.py:143: UserWarning: mkl-service package failed to import, therefore Intel(R) MKL initialization ensuring its correct out-of-the box operation under condition when Gnu OpenMP had already been loaded by Python process is not assured. Please install mkl-service package, see http://github.com/IntelPython/mkl-service
+  from . import _distributor_init
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/02/20 14:16:49 INFO SparkContext: Running Spark version 3.0.0-preview2
+22/02/20 14:16:49 INFO ResourceUtils: ==============================================================
+22/02/20 14:16:49 INFO ResourceUtils: Resources for spark.driver:
+
+22/02/20 14:16:49 INFO ResourceUtils: ==============================================================
+22/02/20 14:16:49 INFO SparkContext: Submitted application: app
+22/02/20 14:16:50 INFO SecurityManager: Changing view acls to: aswa8
+22/02/20 14:16:50 INFO SecurityManager: Changing modify acls to: aswa8
+22/02/20 14:16:50 INFO SecurityManager: Changing view acls groups to:
+22/02/20 14:16:50 INFO SecurityManager: Changing modify acls groups to:
+22/02/20 14:16:50 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(aswa8); groups with view permissions: Set(); users  with modify permissions: Set(aswa8); groups with modify permissions: Set()
+22/02/20 14:16:50 INFO Utils: Successfully started service 'sparkDriver' on port 62386.
+22/02/20 14:16:50 INFO SparkEnv: Registering MapOutputTracker
+22/02/20 14:16:50 INFO SparkEnv: Registering BlockManagerMaster
+22/02/20 14:16:50 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/02/20 14:16:50 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/02/20 14:16:50 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/02/20 14:16:50 INFO DiskBlockManager: Created local directory at C:\Users\aswa8\AppData\Local\Temp\blockmgr-2949b076-7a4b-4e69-9b2c-2b1719d216ae
+22/02/20 14:16:50 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+22/02/20 14:16:50 INFO SparkEnv: Registering OutputCommitCoordinator
+22/02/20 14:16:51 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/02/20 14:16:51 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://host.docker.internal:4040
+22/02/20 14:16:51 INFO Executor: Starting executor ID driver on host host.docker.internal
+22/02/20 14:16:51 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 62401.
+22/02/20 14:16:51 INFO NettyBlockTransferService: Server created on host.docker.internal:62401
+22/02/20 14:16:51 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/02/20 14:16:51 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, host.docker.internal, 62401, None)
+22/02/20 14:16:51 INFO BlockManagerMasterEndpoint: Registering block manager host.docker.internal:62401 with 366.3 MiB RAM, BlockManagerId(driver, host.docker.internal, 62401, None)
+22/02/20 14:16:51 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, host.docker.internal, 62401, None)
+22/02/20 14:16:51 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, host.docker.internal, 62401, None)
+22/02/20 14:16:52 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/C:/Spark/spark3/spark-warehouse').
+22/02/20 14:16:52 INFO SharedState: Warehouse path is 'file:/C:/Spark/spark3/spark-warehouse'.
+22/02/20 14:16:53 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+22/02/20 14:16:53 INFO DAGScheduler: Got job 0 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+22/02/20 14:16:53 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+22/02/20 14:16:53 INFO DAGScheduler: Parents of final stage: List()
+22/02/20 14:16:53 INFO DAGScheduler: Missing parents: List()
+22/02/20 14:16:53 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+22/02/20 14:16:53 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 73.3 KiB, free 366.2 MiB)
+22/02/20 14:16:53 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 26.2 KiB, free 366.2 MiB)
+22/02/20 14:16:53 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on host.docker.internal:62401 (size: 26.2 KiB, free: 366.3 MiB)
+22/02/20 14:16:53 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1206
+22/02/20 14:16:53 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+22/02/20 14:16:53 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+22/02/20 14:16:53 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 7568 bytes)
+22/02/20 14:16:53 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+22/02/20 14:16:54 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2047 bytes result sent to driver
+22/02/20 14:16:54 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 564 ms on host.docker.internal (executor driver) (1/1)
+22/02/20 14:16:54 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+22/02/20 14:16:54 INFO DAGScheduler: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.736 s
+22/02/20 14:16:54 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+22/02/20 14:16:54 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+22/02/20 14:16:54 INFO DAGScheduler: Job 0 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.785098 s
+22/02/20 14:16:55 INFO BlockManagerInfo: Removed broadcast_0_piece0 on host.docker.internal:62401 in memory (size: 26.2 KiB, free: 366.3 MiB)
+22/02/20 14:16:56 INFO V2ScanRelationPushDown:
+Pushing operators to parquet file:/C:/Spark/spark3/path/trade/trade_dt=2020-07-29
+Pushed Filters: isnotnull(trade_dt#0), (trade_dt#0 = 18472)
+Post-Scan Filters: isnotnull(trade_dt#0),(trade_dt#0 = 18472)
+Output: trade_dt#0, symbol#1, exchange#2, event_tm#3, event_seq_nb#4, trade_price#5
+
+22/02/20 14:16:56 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 291.7 KiB, free 366.0 MiB)
+22/02/20 14:16:56 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 24.8 KiB, free 366.0 MiB)
+22/02/20 14:16:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on host.docker.internal:62401 (size: 24.8 KiB, free: 366.3 MiB)
+22/02/20 14:16:56 INFO SparkContext: Created broadcast 1 from saveAsTable at NativeMethodAccessorImpl.java:0
+22/02/20 14:16:56 INFO ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 14:16:56 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 14:16:56 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 14:16:56 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 14:16:56 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 203.9761 ms
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 41.925 ms
+22/02/20 14:16:57 INFO SparkContext: Starting job: saveAsTable at NativeMethodAccessorImpl.java:0
+22/02/20 14:16:57 INFO DAGScheduler: Got job 1 (saveAsTable at NativeMethodAccessorImpl.java:0) with 1 output partitions
+22/02/20 14:16:57 INFO DAGScheduler: Final stage: ResultStage 1 (saveAsTable at NativeMethodAccessorImpl.java:0)
+22/02/20 14:16:57 INFO DAGScheduler: Parents of final stage: List()
+22/02/20 14:16:57 INFO DAGScheduler: Missing parents: List()
+22/02/20 14:16:57 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[6] at saveAsTable at NativeMethodAccessorImpl.java:0), which has no missing parents
+22/02/20 14:16:57 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 173.3 KiB, free 365.8 MiB)
+22/02/20 14:16:57 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 61.7 KiB, free 365.8 MiB)
+22/02/20 14:16:57 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on host.docker.internal:62401 (size: 61.7 KiB, free: 366.2 MiB)
+22/02/20 14:16:57 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1206
+22/02/20 14:16:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[6] at saveAsTable at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+22/02/20 14:16:57 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+22/02/20 14:16:57 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 7988 bytes)
+22/02/20 14:16:57 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 16.8242 ms
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 8.5698 ms
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 14.4436 ms
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 11.2955 ms
+22/02/20 14:16:57 INFO FilterCompat: Filtering using predicate: and(noteq(trade_dt, null), eq(trade_dt, 18472))
+22/02/20 14:16:57 INFO FilterCompat: Filtering using predicate: and(noteq(trade_dt, null), eq(trade_dt, 18472))
+22/02/20 14:16:57 INFO FilterCompat: Filtering using predicate: and(noteq(trade_dt, null), eq(trade_dt, 18472))
+22/02/20 14:16:57 INFO FilePartitionReader: Reading file path: file:///C:/Spark/spark3/path/trade/trade_dt=2020-07-29/part-00000-9b35e612-9ff0-464d-8d3a-7516412b4c8a-c000.snappy.parquet, range: 0-2169, partition values: [empty row]
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 6.396 ms
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 7.8659 ms
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 7.0786 ms
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 7.0655 ms
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 10.3243 ms
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 7.4559 ms
+22/02/20 14:16:57 INFO CodeGenerator: Code generated in 8.0618 ms
+22/02/20 14:16:57 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 14:16:57 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 14:16:57 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 14:16:57 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 14:16:57 INFO CodecConfig: Compression: SNAPPY
+22/02/20 14:16:57 INFO CodecConfig: Compression: SNAPPY
+22/02/20 14:16:57 INFO ParquetOutputFormat: Parquet block size to 134217728
+22/02/20 14:16:57 INFO ParquetOutputFormat: Parquet page size to 1048576
+22/02/20 14:16:57 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+22/02/20 14:16:57 INFO ParquetOutputFormat: Dictionary is on
+22/02/20 14:16:57 INFO ParquetOutputFormat: Validation is off
+22/02/20 14:16:57 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+22/02/20 14:16:57 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+22/02/20 14:16:57 INFO ParquetOutputFormat: Page size checking is: estimated
+22/02/20 14:16:57 INFO ParquetOutputFormat: Min row count for page size check is: 100
+22/02/20 14:16:57 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+22/02/20 14:16:57 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "trade_dt",
+    "type" : "date",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "symbol",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "exchange",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_tm",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_seq_nb",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "trade_price",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "mov_avg_pr",
+    "type" : "double",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional int32 trade_dt (DATE);
+  optional binary symbol (UTF8);
+  optional binary exchange (UTF8);
+  optional float event_tm;
+  optional int32 event_seq_nb;
+  optional float trade_price;
+  optional double mov_avg_pr;
+}
+
+
+22/02/20 14:16:58 INFO CodecPool: Got brand-new compressor [.snappy]
+22/02/20 14:16:58 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 0
+22/02/20 14:16:58 INFO FileOutputCommitter: Saved output of task 'attempt_20220220141657_0001_m_000000_1' to file:/C:/Spark/spark3/spark-warehouse/temp_trade_moving_avg/_temporary/0/task_20220220141657_0001_m_000000
+22/02/20 14:16:58 INFO SparkHadoopMapRedUtil: attempt_20220220141657_0001_m_000000_1: Committed
+22/02/20 14:16:58 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2974 bytes result sent to driver
+22/02/20 14:16:58 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 1606 ms on host.docker.internal (executor driver) (1/1)
+22/02/20 14:16:58 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+22/02/20 14:16:58 INFO DAGScheduler: ResultStage 1 (saveAsTable at NativeMethodAccessorImpl.java:0) finished in 1.638 s
+22/02/20 14:16:58 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+22/02/20 14:16:58 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+22/02/20 14:16:58 INFO DAGScheduler: Job 1 finished: saveAsTable at NativeMethodAccessorImpl.java:0, took 1.656805 s
+22/02/20 14:16:59 INFO FileFormatWriter: Write Job a22f5f65-23bb-4b85-86b1-12e38accff50 committed.
+22/02/20 14:16:59 INFO FileFormatWriter: Finished processing stats for write job a22f5f65-23bb-4b85-86b1-12e38accff50.
+22/02/20 14:16:59 INFO BlockManagerInfo: Removed broadcast_2_piece0 on host.docker.internal:62401 in memory (size: 61.7 KiB, free: 366.3 MiB)
+22/02/20 14:16:59 INFO V2ScanRelationPushDown:
+Pushing operators to parquet file:/C:/Spark/spark3/path/trade/trade_dt=2020-07-29
+Pushed Filters: isnotnull(trade_dt#0), (trade_dt#0 = 18472)
+Post-Scan Filters: isnotnull(trade_dt#0),(trade_dt#0 = 18472)
+Output: trade_dt#0, symbol#1, exchange#2, event_tm#3, event_seq_nb#4, trade_price#5
+
+22/02/20 14:16:59 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 291.7 KiB, free 365.7 MiB)
+22/02/20 14:16:59 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 24.8 KiB, free 365.7 MiB)
+22/02/20 14:16:59 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on host.docker.internal:62401 (size: 24.8 KiB, free: 366.3 MiB)
+22/02/20 14:16:59 INFO SparkContext: Created broadcast 3 from showString at NativeMethodAccessorImpl.java:0
+22/02/20 14:16:59 INFO CodeGenerator: Code generated in 23.4866 ms
+22/02/20 14:16:59 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+22/02/20 14:16:59 INFO DAGScheduler: Got job 2 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+22/02/20 14:16:59 INFO DAGScheduler: Final stage: ResultStage 2 (showString at NativeMethodAccessorImpl.java:0)
+22/02/20 14:16:59 INFO DAGScheduler: Parents of final stage: List()
+22/02/20 14:16:59 INFO DAGScheduler: Missing parents: List()
+22/02/20 14:16:59 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[14] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+22/02/20 14:16:59 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 32.6 KiB, free 365.7 MiB)
+22/02/20 14:16:59 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 13.0 KiB, free 365.6 MiB)
+22/02/20 14:16:59 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on host.docker.internal:62401 (size: 13.0 KiB, free: 366.2 MiB)
+22/02/20 14:16:59 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1206
+22/02/20 14:16:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[14] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+22/02/20 14:16:59 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+22/02/20 14:16:59 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 7988 bytes)
+22/02/20 14:16:59 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+22/02/20 14:16:59 INFO FilterCompat: Filtering using predicate: and(noteq(trade_dt, null), eq(trade_dt, 18472))
+22/02/20 14:16:59 INFO FilterCompat: Filtering using predicate: and(noteq(trade_dt, null), eq(trade_dt, 18472))
+22/02/20 14:16:59 INFO FilterCompat: Filtering using predicate: and(noteq(trade_dt, null), eq(trade_dt, 18472))
+22/02/20 14:16:59 INFO FilePartitionReader: Reading file path: file:///C:/Spark/spark3/path/trade/trade_dt=2020-07-29/part-00000-9b35e612-9ff0-464d-8d3a-7516412b4c8a-c000.snappy.parquet, range: 0-2169, partition values: [empty row]
+22/02/20 14:16:59 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 2137 bytes result sent to driver
+22/02/20 14:16:59 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 56 ms on host.docker.internal (executor driver) (1/1)
+22/02/20 14:16:59 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool
+22/02/20 14:16:59 INFO DAGScheduler: ResultStage 2 (showString at NativeMethodAccessorImpl.java:0) finished in 0.073 s
+22/02/20 14:16:59 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+22/02/20 14:16:59 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+22/02/20 14:16:59 INFO DAGScheduler: Job 2 finished: showString at NativeMethodAccessorImpl.java:0, took 0.085294 s
++--------+------+--------+--------+------------+-----------+----------+
+|trade_dt|symbol|exchange|event_tm|event_seq_nb|trade_price|mov_avg_pr|
++--------+------+--------+--------+------------+-----------+----------+
++--------+------+--------+--------+------------+-----------+----------+
+
+22/02/20 14:16:59 INFO V2ScanRelationPushDown:
+Pushing operators to parquet file:/C:/Spark/spark3/path/trade/trade_dt=2020-07-29
+Pushed Filters: isnotnull(trade_dt#0), (trade_dt#0 = 18472)
+Post-Scan Filters: isnotnull(trade_dt#0),(trade_dt#0 = 18472)
+Output: trade_dt#0, symbol#1, exchange#2, event_tm#3, event_seq_nb#4, trade_price#5
+
+22/02/20 14:16:59 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 291.7 KiB, free 365.4 MiB)
+22/02/20 14:16:59 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 24.8 KiB, free 365.3 MiB)
+22/02/20 14:16:59 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on host.docker.internal:62401 (size: 24.8 KiB, free: 366.2 MiB)
+22/02/20 14:16:59 INFO SparkContext: Created broadcast 5 from saveAsTable at NativeMethodAccessorImpl.java:0
+22/02/20 14:16:59 INFO ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 14:16:59 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 14:16:59 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 14:16:59 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 14:16:59 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 14:16:59 INFO CodeGenerator: Code generated in 6.424 ms
+22/02/20 14:16:59 INFO CodeGenerator: Code generated in 16.9714 ms
+22/02/20 14:16:59 INFO SparkContext: Starting job: saveAsTable at NativeMethodAccessorImpl.java:0
+22/02/20 14:16:59 INFO DAGScheduler: Got job 3 (saveAsTable at NativeMethodAccessorImpl.java:0) with 1 output partitions
+22/02/20 14:16:59 INFO DAGScheduler: Final stage: ResultStage 3 (saveAsTable at NativeMethodAccessorImpl.java:0)
+22/02/20 14:16:59 INFO DAGScheduler: Parents of final stage: List()
+22/02/20 14:16:59 INFO DAGScheduler: Missing parents: List()
+22/02/20 14:16:59 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[19] at saveAsTable at NativeMethodAccessorImpl.java:0), which has no missing parents
+22/02/20 14:16:59 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 171.1 KiB, free 365.2 MiB)
+22/02/20 14:16:59 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 61.1 KiB, free 365.1 MiB)
+22/02/20 14:16:59 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on host.docker.internal:62401 (size: 61.1 KiB, free: 366.2 MiB)
+22/02/20 14:16:59 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1206
+22/02/20 14:16:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[19] at saveAsTable at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+22/02/20 14:16:59 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+22/02/20 14:16:59 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3, host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 7988 bytes)
+22/02/20 14:16:59 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+22/02/20 14:16:59 INFO CodeGenerator: Code generated in 5.4314 ms
+22/02/20 14:16:59 INFO CodeGenerator: Code generated in 8.2583 ms
+22/02/20 14:16:59 INFO CodeGenerator: Code generated in 7.7436 ms
+22/02/20 14:16:59 INFO CodeGenerator: Code generated in 8.0724 ms
+22/02/20 14:16:59 INFO FilterCompat: Filtering using predicate: and(noteq(trade_dt, null), eq(trade_dt, 18472))
+22/02/20 14:16:59 INFO FilterCompat: Filtering using predicate: and(noteq(trade_dt, null), eq(trade_dt, 18472))
+22/02/20 14:16:59 INFO FilterCompat: Filtering using predicate: and(noteq(trade_dt, null), eq(trade_dt, 18472))
+22/02/20 14:16:59 INFO FilePartitionReader: Reading file path: file:///C:/Spark/spark3/path/trade/trade_dt=2020-07-29/part-00000-9b35e612-9ff0-464d-8d3a-7516412b4c8a-c000.snappy.parquet, range: 0-2169, partition values: [empty row]
+22/02/20 14:16:59 INFO CodeGenerator: Code generated in 4.2213 ms
+22/02/20 14:16:59 INFO CodeGenerator: Code generated in 7.7641 ms
+22/02/20 14:16:59 INFO CodeGenerator: Code generated in 8.1263 ms
+22/02/20 14:16:59 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 14:16:59 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 14:16:59 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+22/02/20 14:16:59 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+22/02/20 14:16:59 INFO CodecConfig: Compression: SNAPPY
+22/02/20 14:16:59 INFO CodecConfig: Compression: SNAPPY
+22/02/20 14:16:59 INFO ParquetOutputFormat: Parquet block size to 134217728
+22/02/20 14:16:59 INFO ParquetOutputFormat: Parquet page size to 1048576
+22/02/20 14:16:59 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+22/02/20 14:16:59 INFO ParquetOutputFormat: Dictionary is on
+22/02/20 14:16:59 INFO ParquetOutputFormat: Validation is off
+22/02/20 14:16:59 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+22/02/20 14:16:59 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+22/02/20 14:16:59 INFO ParquetOutputFormat: Page size checking is: estimated
+22/02/20 14:16:59 INFO ParquetOutputFormat: Min row count for page size check is: 100
+22/02/20 14:16:59 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+22/02/20 14:16:59 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "trade_dt",
+    "type" : "date",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "symbol",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "exchange",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_tm",
+    "type" : "float",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "event_seq_nb",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "last_pr",
+    "type" : "double",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional int32 trade_dt (DATE);
+  optional binary symbol (UTF8);
+  optional binary exchange (UTF8);
+  optional float event_tm;
+  optional int32 event_seq_nb;
+  optional double last_pr;
+}
+
+
+22/02/20 14:16:59 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 0
+22/02/20 14:16:59 INFO FileOutputCommitter: Saved output of task 'attempt_20220220141659_0003_m_000000_3' to file:/C:/Spark/spark3/spark-warehouse/temp_last_trade/_temporary/0/task_20220220141659_0003_m_000000
+22/02/20 14:16:59 INFO SparkHadoopMapRedUtil: attempt_20220220141659_0003_m_000000_3: Committed
+22/02/20 14:16:59 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 2931 bytes result sent to driver
+22/02/20 14:16:59 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 237 ms on host.docker.internal (executor driver) (1/1)
+22/02/20 14:16:59 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool
+22/02/20 14:16:59 INFO DAGScheduler: ResultStage 3 (saveAsTable at NativeMethodAccessorImpl.java:0) finished in 0.265 s
+22/02/20 14:16:59 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+22/02/20 14:16:59 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+22/02/20 14:16:59 INFO DAGScheduler: Job 3 finished: saveAsTable at NativeMethodAccessorImpl.java:0, took 0.283227 s
+22/02/20 14:17:00 INFO FileFormatWriter: Write Job 955fb223-0e5b-4990-b86b-1605f40615fe committed.
+22/02/20 14:17:00 INFO FileFormatWriter: Finished processing stats for write job 955fb223-0e5b-4990-b86b-1605f40615fe.
+22/02/20 14:17:00 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+22/02/20 14:17:00 INFO DAGScheduler: Got job 4 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+22/02/20 14:17:00 INFO DAGScheduler: Final stage: ResultStage 4 (parquet at NativeMethodAccessorImpl.java:0)
+22/02/20 14:17:00 INFO DAGScheduler: Parents of final stage: List()
+22/02/20 14:17:00 INFO DAGScheduler: Missing parents: List()
+22/02/20 14:17:00 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[23] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+22/02/20 14:17:00 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 73.3 KiB, free 365.0 MiB)
+22/02/20 14:17:00 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 26.2 KiB, free 365.0 MiB)
+22/02/20 14:17:00 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on host.docker.internal:62401 (size: 26.2 KiB, free: 366.1 MiB)
+22/02/20 14:17:00 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1206
+22/02/20 14:17:00 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[23] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+22/02/20 14:17:00 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks
+22/02/20 14:17:00 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4, host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 7568 bytes)
+22/02/20 14:17:00 INFO Executor: Running task 0.0 in stage 4.0 (TID 4)
+22/02/20 14:17:00 INFO Executor: Finished task 0.0 in stage 4.0 (TID 4). 1994 bytes result sent to driver
+22/02/20 14:17:00 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 69 ms on host.docker.internal (executor driver) (1/1)
+22/02/20 14:17:00 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool
+22/02/20 14:17:00 INFO DAGScheduler: ResultStage 4 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.089 s
+22/02/20 14:17:00 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+22/02/20 14:17:00 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+22/02/20 14:17:00 INFO DAGScheduler: Job 4 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.105276 s
+Traceback (most recent call last):
+  File "C:\Spark\spark3\python\lib\pyspark.zip\pyspark\sql\utils.py", line 98, in deco
+  File "C:\Spark\spark3\python\lib\py4j-0.10.8.1-src.zip\py4j\protocol.py", line 326, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o24.sql.
+: org.apache.spark.sql.AnalysisException: cannot resolve '`rec_type`' given input columns: [quotes.ask_price, quotes.ask_size, quotes.bid_price, quotes.bid_size, quotes.event_seq_nb, quotes.event_tm, quotes.exchange, quotes.symbol, quotes.trade_dt]; line 2 pos 17;
+'Union
+:- 'Project [trade_dt#115, 'rec_type, symbol#116, event_tm#118, event_seq_nb#119, exchange#117, bid_price#120, bid_size#121, ask_price#122, ask_size#123, null AS trade_price#133, null AS mov_avg_pr#134]
+:  +- SubqueryAlias `quotes`
+:     +- RelationV2[trade_dt#115, symbol#116, exchange#117, event_tm#118, event_seq_nb#119, bid_price#120, bid_size#121, ask_price#122, ask_size#123] parquet file:/C:/Spark/spark3/path/quote/quote_dt=2020-07-29
++- Project [trade_dt#140, Q AS rec_type#135, symbol#141, event_tm#143, event_seq_nb#144, exchange#142, null AS bid_price#136, null AS bid_size#137, null AS ask_price#138, null AS ask_size#139, trade_price#145, mov_avg_pr#146]
+   +- SubqueryAlias `default`.`temp_trade_moving_avg`
+      +- Relation[trade_dt#140,symbol#141,exchange#142,event_tm#143,event_seq_nb#144,trade_price#145,mov_avg_pr#146] parquet
+
+        at org.apache.spark.sql.catalyst.analysis.package$AnalysisErrorAt.failAnalysis(package.scala:42)
+        at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$$nestedInanonfun$checkAnalysis$1$2.applyOrElse(CheckAnalysis.scala:140)
+        at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$$nestedInanonfun$checkAnalysis$1$2.applyOrElse(CheckAnalysis.scala:137)
+        at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformUp$2(TreeNode.scala:310)
+        at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:72)
+        at org.apache.spark.sql.catalyst.trees.TreeNode.transformUp(TreeNode.scala:310)
+        at org.apache.spark.sql.catalyst.plans.QueryPlan.$anonfun$transformExpressionsUp$1(QueryPlan.scala:97)
+        at org.apache.spark.sql.catalyst.plans.QueryPlan.$anonfun$mapExpressions$1(QueryPlan.scala:109)
+        at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:72)
+        at org.apache.spark.sql.catalyst.plans.QueryPlan.transformExpression$1(QueryPlan.scala:109)
+        at org.apache.spark.sql.catalyst.plans.QueryPlan.recursiveTransform$1(QueryPlan.scala:120)
+        at org.apache.spark.sql.catalyst.plans.QueryPlan.$anonfun$mapExpressions$3(QueryPlan.scala:125)
+        at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+        at scala.collection.immutable.List.foreach(List.scala:392)
+        at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+        at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+        at scala.collection.immutable.List.map(List.scala:298)
+        at org.apache.spark.sql.catalyst.plans.QueryPlan.recursiveTransform$1(QueryPlan.scala:125)
+        at org.apache.spark.sql.catalyst.plans.QueryPlan.$anonfun$mapExpressions$4(QueryPlan.scala:130)
+        at org.apache.spark.sql.catalyst.trees.TreeNode.mapProductIterator(TreeNode.scala:214)
+        at org.apache.spark.sql.catalyst.plans.QueryPlan.mapExpressions(QueryPlan.scala:130)
+        at org.apache.spark.sql.catalyst.plans.QueryPlan.transformExpressionsUp(QueryPlan.scala:97)
+        at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis$1(CheckAnalysis.scala:137)
+        at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis$1$adapted(CheckAnalysis.scala:91)
+        at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:154)
+        at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1(TreeNode.scala:153)
+        at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1$adapted(TreeNode.scala:153)
+        at scala.collection.immutable.List.foreach(List.scala:392)
+        at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:153)
+        at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis(CheckAnalysis.scala:91)
+        at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis$(CheckAnalysis.scala:88)
+        at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis(Analyzer.scala:122)
+        at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:148)
+        at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:201)
+        at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:145)
+        at org.apache.spark.sql.execution.QueryExecution.$anonfun$analyzed$1(QueryExecution.scala:69)
+        at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:111)
+        at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:66)
+        at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:66)
+        at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:58)
+        at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:95)
+        at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:607)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+        at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+        at py4j.Gateway.invoke(Gateway.java:282)
+        at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+        at py4j.commands.CallCommand.execute(CallCommand.java:79)
+        at py4j.GatewayConnection.run(GatewayConnection.java:238)
+        at java.lang.Thread.run(Thread.java:748)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/aswa8/OneDrive - Queen's University/Desktop/Springboard/Guided_Capstone/Step4-Analytical_ETL/analytical_etl.py", line 46, in <module>
+    quote_union = spark.sql("""
+  File "C:\Spark\spark3\python\lib\pyspark.zip\pyspark\sql\session.py", line 806, in sql
+  File "C:\Spark\spark3\python\lib\py4j-0.10.8.1-src.zip\py4j\java_gateway.py", line 1285, in __call__
+  File "C:\Spark\spark3\python\lib\pyspark.zip\pyspark\sql\utils.py", line 102, in deco
+pyspark.sql.utils.AnalysisException: cannot resolve '`rec_type`' given input columns: [quotes.ask_price, quotes.ask_size, quotes.bid_price, quotes.bid_size, quotes.event_seq_nb, quotes.event_tm, quotes.exchange, quotes.symbol, quotes.trade_dt]; line 2 pos 17;
+'Union
+:- 'Project [trade_dt#115, 'rec_type, symbol#116, event_tm#118, event_seq_nb#119, exchange#117, bid_price#120, bid_size#121, ask_price#122, ask_size#123, null AS trade_price#133, null AS mov_avg_pr#134]
+:  +- SubqueryAlias `quotes`
+:     +- RelationV2[trade_dt#115, symbol#116, exchange#117, event_tm#118, event_seq_nb#119, bid_price#120, bid_size#121, ask_price#122, ask_size#123] parquet file:/C:/Spark/spark3/path/quote/quote_dt=2020-07-29
++- Project [trade_dt#140, Q AS rec_type#135, symbol#141, event_tm#143, event_seq_nb#144, exchange#142, null AS bid_price#136, null AS bid_size#137, null AS ask_price#138, null AS ask_size#139, trade_price#145, mov_avg_pr#146]
+   +- SubqueryAlias `default`.`temp_trade_moving_avg`
+      +- Relation[trade_dt#140,symbol#141,exchange#142,event_tm#143,event_seq_nb#144,trade_price#145,mov_avg_pr#146] parquet
+
+22/02/20 14:17:00 INFO SparkContext: Invoking stop() from shutdown hook
+22/02/20 14:17:00 INFO SparkUI: Stopped Spark web UI at http://host.docker.internal:4040
+22/02/20 14:17:00 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+22/02/20 14:17:00 INFO MemoryStore: MemoryStore cleared
+22/02/20 14:17:00 INFO BlockManager: BlockManager stopped
+22/02/20 14:17:00 INFO BlockManagerMaster: BlockManagerMaster stopped
+22/02/20 14:17:00 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+22/02/20 14:17:00 INFO SparkContext: Successfully stopped SparkContext
+22/02/20 14:17:00 INFO ShutdownHookManager: Shutdown hook called
+22/02/20 14:17:00 INFO ShutdownHookManager: Deleting directory C:\Users\aswa8\AppData\Local\Temp\spark-627cdc87-fefd-41f1-b644-3cec0d757065
+22/02/20 14:17:00 INFO ShutdownHookManager: Deleting directory C:\Users\aswa8\AppData\Local\Temp\spark-b4d500ee-5ee2-4056-8793-652f004a88bb\pyspark-406dd19f-1291-4105-8846-76ec86db03af
+22/02/20 14:17:00 INFO ShutdownHookManager: Deleting directory C:\Users\aswa8\AppData\Local\Temp\spark-b4d500ee-5ee2-4056-8793-652f004a88bb
