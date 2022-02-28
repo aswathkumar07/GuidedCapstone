@@ -52,10 +52,10 @@ quotes_df = spark.read.parquet("path/quote/quote_dt={}".format("2020-07-29"))
 quotes_df.createOrReplaceTempView("quotes")
 
 quote_union = spark.sql("""
-SELECT trade_dt, rec_type,  symbol,event_tm,event_seq_nb,exchange,bid_price,bid_size,ask_price,
+SELECT trade_dt, "Q" as rec_type, symbol,event_tm,event_seq_nb,exchange,bid_price,bid_size,ask_price,
 ask_size,null as trade_price,null as mov_avg_pr FROM quotes
 UNION ALL
-SELECT trade_dt, "Q" as rec_type, symbol,event_tm,event_seq_nb,exchange,null as bid_price,null as bid_size,null as ask_price,
+SELECT trade_dt, "T" as rec_type, symbol,event_tm,event_seq_nb,exchange,null as bid_price,null as bid_size,null as ask_price,
 null as ask_size,trade_price,mov_avg_pr FROM temp_trade_moving_avg
 """)
 
